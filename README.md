@@ -1,12 +1,17 @@
-### My dotfiles
+# My dotfiles
 
-# Neovim
+### Neovim
 Contains LazyNvim preset + transparent theme.
 
-# Tmux
-Changed keybindings.
+### Tmux
+Changed:
+  - Added mouse support.
+  - Panes/Windows indexed starting from 1.
+  - prefix set to <C-Space>.
+  - | for horizontal split, - for vertical.
+  - TPM
 
-# Alacritty
+### Alacritty
 Changed font and opacity.
 
 
