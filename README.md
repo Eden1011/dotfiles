@@ -1,4 +1,5 @@
 # My dotfiles
+Place into $HOME/.config/
 
 ### Neovim
 Contains LazyNvim preset + transparent theme.
