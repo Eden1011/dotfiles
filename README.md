@@ -3,7 +3,9 @@ Place into $HOME/.config/
 
 Important commands:
   - `Mason` for managing LSPs.
-  - `e 'path'` to open explorer.
+  - `<C-e>` to open Neotree.
+  - `<C-t>` to open Telescope.
+  - <C-g> to open Telescope live_grep (find pattern in all files).
 
 
 ### Neovim
