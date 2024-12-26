@@ -6,11 +6,17 @@ Important commands:
   - `<C-e>` to open Neotree.
   - `<C-t>` to open Telescope.
   - `<C-g>` to open Telescope live_grep (find pattern in all files).
+  - `<leader>sb` to find pattern in current file.
+  - `{}` to skip to opening of paragraph, or end of paragraph. 
+  - `<C-l>` to go to right window.
 
+Additional commands:
+  - `<leader>us` toggle spelling check.
+  - `<leader>uf` toggle global LSP.
 
 ### Neovim
 Contains LazyNvim preset + transparent theme + Mason and LspConfig.
-
+Leader key is `<space>`.
 ### Tmux
 Changed:
   - Added mouse support.
