@@ -4,11 +4,12 @@ Place into $HOME/.config/
 Important commands:
   - `Mason` for managing LSPs.
   - `<C-e>` to open Neotree.
-  - `<C-t>` to open Telescope.
+  - `<C-t>` to open Telescope (look for files).
   - `<C-g>` to open Telescope live_grep (find pattern in all files).
   - `<leader>sb` to find pattern in current file.
-  - `{}` to skip to opening of paragraph, or end of paragraph. 
+  - `{` or `}` to skip to opening of paragraph, or end of paragraph. 
   - `<C-l>` to go to right window.
+  - `gd` go to definition.
 
 Additional commands:
   - `<leader>us` toggle spelling check.
