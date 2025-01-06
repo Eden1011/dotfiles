@@ -6,3 +6,5 @@ local map = vim.keymap.set
 map("n", "<C-e>", "<cmd>Neotree<cr>") -- open Neotree
 map("n", "<C-t>", "<cmd>Telescope find_files<cr>") -- find files in project
 map("n", "<C-g>", "<cmd>Telescope live_grep<cr>") -- grep for a pattern in all files
+map({ "n", "v" }, "<C-Down>", "}", { desc = "Paragraph down" })
+map({ "n", "v" }, "<C-Up>", "{", { desc = "Paragraph up" })
