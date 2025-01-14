@@ -1,11 +1,23 @@
+--return {
+--  "tiagovla/tokyodark.nvim",
+--  opts = {
+--    transparent_background = true,
+--    terminal_colors = true,
+--  },
+--  config = function(_, opts)
+--    require("tokyodark").setup(opts) -- calling setup is optional
+--    vim.cmd([[colorscheme tokyodark]])
+--  end,
+--}
 return {
-  "tiagovla/tokyodark.nvim",
+  "navarasu/onedark.nvim",
   opts = {
-    transparent_background = true,
-    terminal_colors = true,
+    style = "deep",
+    transparent = true,
+    term_colors = true,
   },
   config = function(_, opts)
-    require("tokyodark").setup(opts) -- calling setup is optional
-    vim.cmd([[colorscheme tokyodark]])
+    require("onedark").setup(opts) -- calling setup is optional
+    vim.cmd([[colorscheme onedark]])
   end,
 }
