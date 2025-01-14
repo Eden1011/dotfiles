@@ -15,6 +15,9 @@ return {
     style = "deep",
     transparent = true,
     term_colors = true,
+    lualine = {
+      transparent = true,
+    },
   },
   config = function(_, opts)
     require("onedark").setup(opts) -- calling setup is optional
