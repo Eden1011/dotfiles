@@ -10,7 +10,7 @@ lspconfig.denols.setup({
   init_options = {
     enable = true,
     unstable = true,
-    importMap = "./import_map.json",
+    importMap = "./deno.json",
     codeLens = {
       implementations = true,
       references = true,
