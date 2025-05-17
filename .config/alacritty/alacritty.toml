@@ -1,0 +1,6 @@
+[window]
+opacity = 0.5
+blur = true
+
+[font]
+normal = { family = "0xProto Nerd Font Mono", style = "normal" }

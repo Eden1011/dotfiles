@@ -1,0 +1,15 @@
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+tmux/*
+!tmux/tmux.conf
+alacritty/*
+!alacritty/alacritty.toml
+.neoconf.json
+LICENSE
+lazy-lock.json

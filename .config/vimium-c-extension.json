@@ -1,0 +1,46 @@
+{
+  "name": "Vimium C",
+  "@time": "5/17/2025, 10:45:37 PM",
+  "time": 1747514737435,
+  "environment": {
+    "extension": "2.12.3",
+    "platform": "linux",
+    "firefox": 137
+  },
+  "grabBackFocus": true,
+  "keyLayout": 2,
+  "keyMappings": [
+    "#!no-check",
+    "# Insert your preferred key mappings here.",
+    "unmap u",
+    "unmap d",
+    "unmap gt",
+    "unmap gT",
+    "unmap H",
+    "unmap L",
+    "unmap ^",
+    "unmap x",
+    "",
+    "",
+    "map { scrollPageUp",
+    "map } scrollPageDown",
+    "map H previousTab",
+    "map ! visitPreviousTab",
+    "map w removeTab",
+    "map q goBack",
+    "map e goForward",
+    "map L nextTab",
+    ""
+  ],
+  "searchEngines": [
+    "g|go|gg|google|Google: https://www.google.com/search?q=%s \\",
+    "  www.google.com re=/^(?:\\.[a-z]{2,4})?\\/search\\b.*?[#&?]q=([^#&]*)/i \\",
+    " blank=https://www.google.com/ Google",
+    "g.m|gm|g.map|gmap: https://www.google.com/maps?q=%s \\",
+    "  blank=https://www.google.com/maps Google Maps",
+    "y|yt: https://www.youtube.com/results?search_query=%s \\",
+    "  blank=https://www.youtube.com/ YouTube",
+    ""
+  ],
+  "vimSync": true
+}
