@@ -72,7 +72,7 @@ Navigating inside buffer:
 
 - `<C-Down>` to move a paragraph down (previously `}`)
 - `<C-Up>` to move a paragraph up (previously `{`)
-- `s or S {char}{char}` to _leap_ a text after or before the cursor, that contains those characters. Press a highlighted tag to jump to a different match.
+- `s or S {char}{char}` to _leap_ to a text after or before the cursor, that contains those characters. Press a highlighted tag to jump to a different match.
 
 Navigating different buffers and buffer actions:
 
