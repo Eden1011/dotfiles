@@ -1,7 +1,9 @@
 # Dotfiles
 
 Managed using GNU Stow.
+
 Place repo into `$HOME`, then use `stow -t $HOME .` to symlink the inner `.config`.
+
 Problem stowing? Use the `-R` flag to restow.
 
 Dependencies are: `alacritty`, `nvim (nightly)`, `tmux`
