@@ -7,12 +7,15 @@ Place repo into `$HOME`, then use `stow -t $HOME .` to symlink the inner `.confi
 Problem stowing? Use the `-R` flag to restow.
 
 Dependencies are: `alacritty`, `nvim (nightly)`, `tmux`
+
 Sub-dependencies: `tpm`
 
 ## Tmux
 
 Prefix: `<C-Space>`
+
 To configure `tmux` press `Prefix + I`.
+
 Keybindings:
 
 Sessions management:
@@ -52,6 +55,7 @@ Plugin keybindings:
 - Related: `<leader>sb` to find text usage within current buffer
 
 Window management:
+
 Note: Neo-tree is unaffected by plugin resizing if the selected buffer is not Neo-tree, otherwise, resizing applies. Manual resizing always applies.
 
 - `<C- h, j, k, l>` to switch between windows
@@ -79,6 +83,7 @@ Navigating different buffers and buffer actions:
   - `<leader>be` to open buffer tree (Neo-tree)
 
 Neo-tree actions:
+
 Note: below keybindings work only inside the Neo-tree buffer
 
 - `#` to fuzzy find a term inside the current tree
@@ -97,9 +102,10 @@ Other stuff:
 ## Vimium C (Firefox extension)
 
 Place the `.json` file inside the vimium settings page.
+
 You can access it using the plugin inside Firefox.
 
-keybindings:
+Keybindings:
 
 - `f` to open a link in the current tab
 - `F` to open a link in a new tab
