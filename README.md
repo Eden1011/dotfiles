@@ -10,6 +10,14 @@ Dependencies are: `alacritty`, `nvim (nightly)`, `tmux`
 
 Sub-dependencies: `tpm`
 
+## Bash
+
+Vi mode is on, press `Esc` to enter `Normal` mode. To enter `Insert` mode press `i` or the `<Insert>` button.
+
+Press `v` to enter `$EDITOR` (`Visual`) mode, which uses Neovim, and edit the command from there.
+
+Save and quit to input command from `Visual` mode.
+
 ## Tmux
 
 Prefix: `<C-Space>`
@@ -50,8 +58,8 @@ The leader key (`<leader>`) is `<space>`.
 
 Plugin keybindings:
 
-- `<C-t>` to open `Telescope find_files` (`ff` if inside Neo-tree)
-- `<C-g>` to open `Telescope live_grep` (`fg` if inside Neo-tree)
+- `<C-t>` to open `Telescope find_files` (`f` if inside Neo-tree)
+- `<C-g>` to open `Telescope live_grep` (`g` if inside Neo-tree)
 - Related: `<leader>sb` to find text usage within current buffer
 
 Window management:
@@ -91,13 +99,16 @@ Note: below keybindings work only inside the Neo-tree buffer
 - `z`, `Z` to close and open all nodes inside the tree
 - `s, S (on file)` to open a new horizontal or vertical window (close single window with `:q`)
 - `o` to see file details
-- Deprecated: _uvlibs_ refreshes tree automatically ~~`R` to refresh tree~~
+- `P` to preview file, highlighting a different file, changes the preview. This uses any open buffer as the preview window.
+- Deprecated: _libuv_ refreshes tree automatically ~~`R` to refresh tree~~
 - and `?` to look up the rest of Neo-tree commands
-  Telescope works inside the Neo-tree buffer. Use `ff` or `fg`.
+
+  Telescope works inside the Neo-tree buffer. Use `f` or `g`.
 
 Other stuff:
 
 - `:Mason` for configuring LSPs.
+- `<leader>p` to open yank history.
 
 ## Vimium C (Firefox extension)
 
