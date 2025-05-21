@@ -58,8 +58,9 @@ The leader key (`<leader>`) is `<space>`.
 
 Plugin keybindings:
 
-- `<C-t>` to open `Telescope find_files` (`f` if inside Neo-tree)
+- `<C-t>` to open `Telescope find_files` (`t` if inside Neo-tree)
 - `<C-g>` to open `Telescope live_grep` (`g` if inside Neo-tree)
+- `<C-b>` to open `Telescope buffers` (`b` if inside Neo-tree)
 - Related: `<leader>sb` to find text usage within current buffer
 
 Window management:
@@ -68,12 +69,12 @@ Note: Neo-tree is unaffected by plugin resizing if the selected buffer is not Ne
 
 - `<C- h, j, k, l>` to switch between windows
 - Resize windows, by plugin:
-  - `<C-w>a` to maximize current window in all directions (focus)
-  - `<C-w>v`, `<C-w>h` to maximize window vertically or horizontally
-  - `<C-w>e` to equalize width of all windows
+  - `<C-w>z` to maximize current window in all directions (focus)
+  - `<C-w>_`, `<C-w>|` to maximize window vertically or horizontally
+  - `<C-w>=` to equalize width of all windows
 - Resize windows, by hand:
   - `<C-w>+`, `<C-w>-` to increase or decrease window height by 3 units
-  - `<C-w>[`, `<C-w>]` to increase or decrease window width by 3 units
+  - `<C-w><`, `<C-w>>` to increase or decrease window width by 5 units
     Note: manual handling of window size will activate automatic plugin resizing for correctness
 
 Navigating inside buffer:
@@ -97,13 +98,13 @@ Note: below keybindings work only inside the Neo-tree buffer
 - `#` to fuzzy find a term inside the current tree
 - `<`, `>` to move to previous, or next Neo-tree type (files, open buffers, git)
 - `z`, `Z` to close and open all nodes inside the tree
-- `s, S (on file)` to open a new horizontal or vertical window (close single window with `:q`)
+- `s, S (on file)` to open a new horizontal or vertical window (close single window with `:q` or with `<C-w>q`)
 - `o` to see file details
 - `P` to preview file, highlighting a different file, changes the preview. This uses any open buffer as the preview window.
 - Deprecated: _libuv_ refreshes tree automatically ~~`R` to refresh tree~~
 - and `?` to look up the rest of Neo-tree commands
 
-  Telescope works inside the Neo-tree buffer. Use `f` or `g`.
+  Telescope works inside the Neo-tree buffer. Use `t` or `g` or `b`.
 
 Other stuff:
 

@@ -10,8 +10,7 @@ TELESCOPE = {
     return {
       { "<C-t>", "<cmd>Telescope find_files<cr>", desc = "find files in project" },
       { "<C-g>", "<cmd>Telescope live_grep<cr>", desc = "find words in project files" },
-      { "ff", "<cmd>Telescope find_files<cr>" },
-      { "fg", "<cmd>Telescope live_grep<cr>" },
+      { "<C-b>", "<cmd>Telescope buffers<cr>", desc = "find buffers" },
     }
   end,
 }
@@ -36,7 +35,7 @@ NEOTREE = {
       width = NEOTREE_DEFAULT_WIDTH,
       mappings = {
         ["Z"] = "expand_all_nodes",
-        ["f"] = {
+        ["t"] = {
           function()
             vim.cmd("Telescope find_files")
           end,
@@ -44,6 +43,11 @@ NEOTREE = {
         ["g"] = {
           function()
             vim.cmd("Telescope live_grep")
+          end,
+        },
+        ["b"] = {
+          function()
+            vim.cmd("Telescope buffers")
           end,
         },
         ["P"] = {
