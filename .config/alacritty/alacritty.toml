@@ -1,6 +1,45 @@
 [window]
-opacity = 0.5
-blur = true
+#opacity = 0.5
+#blur = true
+#
+# Below is the new dark theme style for alacritty
+decorations = "none"
+startup_mode = "Maximized"
+
+[colors.primary]
+background = "#000000"
+#foreground = "#a0a0a0"
+#
+#[colors.cursor]
+#text = "#000000"
+#cursor = "#606060"
+#
+#[colors.selection]
+#text = "#000000"
+#background = "#404040"
+#
+#[colors.normal]
+#black = "#000000"
+#red = "#cc6666"
+#green = "#66cc66"
+#yellow = "#cccc66"
+#blue = "#6666cc"
+#magenta = "#cc66cc"
+#cyan = "#66cccc"
+#white = "#a0a0a0"
+#
+#[colors.bright]
+#black = "#404040"
+#red = "#ff9999"
+#green = "#99ff99"
+#yellow = "#ffff99"
+#blue = "#9999ff"
+#magenta = "#ff99ff"
+#cyan = "#99ffff"
+#white = "#cccccc"
 
 [font]
 normal = { family = "0xProto Nerd Font Mono", style = "normal" }
+
+[cursor]
+style.blinking = "Always"

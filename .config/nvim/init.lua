@@ -1,3 +1,2 @@
-require("config.lazy")
-
-vim.opt.termguicolors = true
+require("eden.core")
+require("eden.lazy")
