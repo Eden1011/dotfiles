@@ -67,5 +67,4 @@ vim.keymap.set("n", "<leader>lx", function()
 	})
 end, { desc = "Toggle LSP diagnostics" })
 
-vim.api.nvim_set_keymap("n", "<leader>zf", ":Focus<CR>", {})
-vim.api.nvim_set_keymap("n", "<leader>zz", ":Zen<CR>", {})
+vim.keymap.set("n", "<leader>zf", "<cmd>:Focus<CR>", {})
