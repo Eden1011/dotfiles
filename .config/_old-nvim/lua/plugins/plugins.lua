@@ -37,17 +37,17 @@ NEOTREE = {
         ["Z"] = "expand_all_nodes",
         ["t"] = {
           function()
-            vim.cmd("Telescope find_files")
+            a.cmd("Telescope find_files")
           end,
         },
         ["g"] = {
           function()
-            vim.cmd("Telescope live_grep")
+            a.cmd("Telescope live_grep")
           end,
         },
         ["b"] = {
           function()
-            vim.cmd("Telescope buffers")
+            a.cmd("Telescope buffers")
           end,
         },
         ["P"] = {
@@ -70,9 +70,9 @@ WINDOW_RESIZE = {
   },
   lazy = false,
   config = function()
-    vim.o.winwidth = 10
-    vim.o.winminwidth = 10
-    vim.o.equalalways = false
+    a.o.winwidth = 10
+    a.o.winminwidth = 10
+    a.o.equalalways = false
     require("windows").setup({
       autowidth = {
         enable = true,

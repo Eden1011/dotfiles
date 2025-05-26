@@ -36,8 +36,9 @@ opt.splitbelow = true
 
 opt.isfname:append("@-@")
 opt.updatetime = 50
-opt.colorcolumn = "80"
 
 opt.clipboard:append("unnamedplus")
 opt.hlsearch = true
 opt.mouse = "a"
+
+vim.opt.cmdheight = 0

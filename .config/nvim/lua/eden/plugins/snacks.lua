@@ -8,16 +8,15 @@ return {
 			dashboard = { enabled = true },
 			explorer = { enabled = true },
 			indent = { enabled = true },
+			image = { enabled = false },
 			input = { enabled = true },
 			notifier = {
 				enabled = true,
 				timeout = 3000,
 			},
-			picker = { enabled = true,
-			layout = {
-				preset = "ivy", 
-			},
-		},
+			picker = { enabled = true, layout = {
+				preset = "ivy",
+			} },
 			quickfile = { enabled = true },
 			scope = { enabled = true },
 			scroll = { enabled = true },
@@ -109,7 +108,13 @@ return {
 				end,
 				desc = "Git Branches",
 			},
-{ "<leader>gl", function() require("snacks").lazygit.log() end, desc = "Lazygit Logs" },
+			{
+				"<leader>gl",
+				function()
+					require("snacks").lazygit.log()
+				end,
+				desc = "Lazygit Logs",
+			},
 			{
 				"<leader>gs",
 				function()
@@ -130,14 +135,6 @@ return {
 					Snacks.picker.grep_buffers()
 				end,
 				desc = "Search for keywords in all buffer",
-			},
-			{
-				"<leader>fw",
-				function()
-					Snacks.picker.grep_word()
-				end,
-				desc = "Grep next word after cursor in files within current directory",
-				mode = { "n", "x" },
 			},
 			{
 				"<leader>s/",
@@ -175,13 +172,6 @@ return {
 				desc = "Diagnostics",
 			},
 			{
-				"<leader>sD",
-				function()
-					Snacks.picker.diagnostics_buffer()
-				end,
-				desc = "Buffer Diagnostics",
-			},
-			{
 				"<leader>sh",
 				function()
 					Snacks.picker.help()
@@ -215,13 +205,6 @@ return {
 					Snacks.picker.man()
 				end,
 				desc = "Man Pages",
-			},
-			{
-				"<leader>sq",
-				function()
-					Snacks.picker.qflist()
-				end,
-				desc = "Quickfix List",
 			},
 			{
 				"<leader>sR",
@@ -274,27 +257,6 @@ return {
 				desc = "Goto T[y]pe Definition",
 			},
 			{
-				"<leader>ss",
-				function()
-					Snacks.picker.lsp_symbols()
-				end,
-				desc = "LSP Symbols",
-			},
-			{
-				"<leader>sS",
-				function()
-					Snacks.picker.lsp_workspace_symbols()
-				end,
-				desc = "LSP Workspace Symbols",
-			},
-			{
-				"<leader>z",
-				function()
-					Snacks.zen()
-				end,
-				desc = "Toggle Zen Mode",
-			},
-			{
 				"<leader>n",
 				function()
 					Snacks.notifier.show_history()
@@ -309,7 +271,7 @@ return {
 				desc = "Delete Buffer",
 			},
 			{
-				"<leader>cR",
+				"<leader>nr",
 				function()
 					Snacks.rename.rename_file()
 				end,
@@ -330,10 +292,5 @@ return {
 				desc = "Dismiss All Notifications",
 			},
 		},
-	},
-	{
-		"folke/todo-comments.nvim",
-		event = { "BufReadPre", "BufNewFile" },
-		optional = true,
 	},
 }

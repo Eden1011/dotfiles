@@ -1,1 +1,1 @@
-require("floaterminal")
+require("eden.core.autocmds.floaterminal")
