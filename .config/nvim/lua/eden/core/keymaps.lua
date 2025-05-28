@@ -8,6 +8,11 @@ local function cmd(command)
 end
 
 set({ "n", "i", "v" }, "<F1>", "<nop>")
+set({ "n", "v" }, "<C-Down>", "}", { desc = "Paragraph down" })
+set({ "n", "v" }, "<C-Up>", "{", { desc = "Paragraph up" })
+set("n", "H", ":tabnext<CR>", { noremap = true, silent = true })
+set("n", "L", ":tabprevious<CR>", { noremap = true, silent = true })
+set("n", "<leader>tb", ":tabnew<CR>", { noremap = true, silent = true })
 
 set("n", "<C-w>z", cmd("WindowsMaximize"), { desc = "Maxmizie current window in all directions (Focus)" })
 set("n", "<C-w>_", cmd("WindowsMaximizeVertically"), { desc = "Maximize current window vertically" })
@@ -55,8 +60,8 @@ vim.keymap.set({ "n", "i", "v" }, "<C-s>", function()
 end, { desc = "Save all buffers" })
 
 set("n", "<leader>qq", function()
-	vim.cmd("wqa")
-end, { desc = "Save all buffers and quit" })
+	vim.cmd("q!")
+end, { desc = "Quit all without saving" })
 
 local isLspDiagnosticsVisible = true
 vim.keymap.set("n", "<leader>lx", function()

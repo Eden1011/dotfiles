@@ -10,6 +10,7 @@ return {
 				javascriptreact = { "prettier" },
 				typescriptreact = { "prettier" },
 				svelte = { "prettier" },
+				go = { "gofumpt", "goimports" },
 				css = { "prettier" },
 				html = { "prettier" },
 				json = { "prettier" },
