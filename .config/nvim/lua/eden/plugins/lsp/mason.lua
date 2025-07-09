@@ -33,6 +33,7 @@ return {
 				"emmet_ls",
 				"emmet_language_server",
 				"marksman",
+				"pyright",
 			},
 		})
 
@@ -43,9 +44,9 @@ return {
 				"gofumpt",
 				"goimports",
 				"isort",
-				"pylint",
 				"clangd",
 				"denols",
+				"black",
 			},
 		})
 	end,

@@ -12,7 +12,6 @@ return {
 			javascriptreact = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
 			svelte = { "eslint_d" },
-			python = { "pylint" },
 		}
 
 		eslint.args = {

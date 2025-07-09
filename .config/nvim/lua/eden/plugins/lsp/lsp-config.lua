@@ -139,5 +139,27 @@ return {
 				},
 			},
 		})
+
+		--pyright
+		lspconfig.pyright.setup({
+			capabilities = capabilities,
+			filetypes = { "python", "py" },
+			root_markers = {
+				"pyproject.toml",
+				"setup.py",
+				"requirements.txt",
+				"Pipfile",
+				"pyrightconfig.json",
+			},
+			settings = {
+				python = {
+					analysis = {
+						autoSearchPaths = true,
+						useLibraryCodeForTypes = true,
+						diagnosticMode = "openFilesOnly",
+					},
+				},
+			},
+		})
 	end,
 }
