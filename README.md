@@ -8,7 +8,7 @@ Problem stowing? Use the `-R` flag to restow, or just delete the conflicting fil
 
 Dependencies are: `alacritty`, `nvim (nightly)`, `tmux`
 
-Sub-dependencies: `tpm`
+Sub-dependencies: `tpm`, `fzf` (otherwise tmux-sessionx wont launch).
 
 ## Bash
 
@@ -34,15 +34,15 @@ Sessions management:
 - `Prefix + X` to kill current session (doesn't delete from saved sessions)
 - `Prefix + ( or )` to switch to previous or next session
 - Deprecated because of `session-x`:
-  - ~~`Prefix + D` to select which session to detach from~~
-  - ~~`Prefix + S` to select a session~~
+    - ~~`Prefix + D` to select which session to detach from~~
+    - ~~`Prefix + S` to select a session~~
 
 Terminal interaction:
 
 - `Prefix + v` to enter Vi mode
-  - Vi: `/` to grep text (press `n` or `N` to switch between highlights),
-  - Vi: `v` to select text (move around with Vi keybindings),
-  - Vi: `y` to yank selection to system clipboard.
+    - Vi: `/` to grep text (press `n` or `N` to switch between highlights),
+    - Vi: `v` to select text (move around with Vi keybindings),
+    - Vi: `y` to yank selection to system clipboard.
 
 Window & pane control:
 
@@ -69,13 +69,13 @@ Note: Neo-tree is unaffected by plugin resizing if the selected buffer is not Ne
 
 - `<C- h, j, k, l>` to switch between windows
 - Resize windows, by plugin:
-  - `<C-w>z` to maximize current window in all directions (focus)
-  - `<C-w>_`, `<C-w>|` to maximize window vertically or horizontally
-  - `<C-w>=` to equalize width of all windows
+    - `<C-w>z` to maximize current window in all directions (focus)
+    - `<C-w>_`, `<C-w>|` to maximize window vertically or horizontally
+    - `<C-w>=` to equalize width of all windows
 - Resize windows, by hand:
-  - `<C-w>+`, `<C-w>-` to increase or decrease window height by 3 units
-  - `<C-w><`, `<C-w>>` to increase or decrease window width by 5 units
-    Note: manual handling of window size will activate automatic plugin resizing for correctness
+    - `<C-w>+`, `<C-w>-` to increase or decrease window height by 3 units
+    - `<C-w><`, `<C-w>>` to increase or decrease window width by 5 units
+      Note: manual handling of window size will activate automatic plugin resizing for correctness
 
 Navigating inside buffer:
 
@@ -87,9 +87,9 @@ Navigating different buffers and buffer actions:
 
 - `<S- h, l>` go to previous, next buffer (tab)
 - Actions:
-  - `<leader>bo` to delete all other buffers
-  - `<leader>bd` to delete current buffer
-  - `<leader>be` to open buffer tree (Neo-tree)
+    - `<leader>bo` to delete all other buffers
+    - `<leader>bd` to delete current buffer
+    - `<leader>be` to open buffer tree (Neo-tree)
 
 Neo-tree actions:
 
@@ -104,7 +104,7 @@ Note: below keybindings work only inside the Neo-tree buffer
 - Deprecated: _libuv_ refreshes tree automatically ~~`R` to refresh tree~~
 - and `?` to look up the rest of Neo-tree commands
 
-  Telescope works inside the Neo-tree buffer. Use `t` or `g` or `b`.
+    Telescope works inside the Neo-tree buffer. Use `t` or `g` or `b`.
 
 Other stuff:
 
