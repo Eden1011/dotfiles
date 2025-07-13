@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 local opts = { noremap = true, silent = true }
-local set = vim.keymaps.set
+local set = vim.keymap.set
 local api = vim.api
 local cmd = vim.cmd
 

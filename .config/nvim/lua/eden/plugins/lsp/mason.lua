@@ -47,6 +47,7 @@ return {
 				"clangd",
 				"denols",
 				"black",
+				"eslint_d",
 			},
 		})
 	end,

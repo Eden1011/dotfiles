@@ -10,3 +10,6 @@ normal = { family = "0xProto Nerd Font Mono", style = "normal" }
 
 [cursor]
 style.blinking = "Always"
+
+[mouse]
+hide_when_typing = true
