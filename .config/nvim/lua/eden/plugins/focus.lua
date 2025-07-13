@@ -5,9 +5,5 @@ return {
 		window = {
 			backdrop = 1,
 		},
-		plugins = {
-			-- tmux = { enabled = true },
-			diagnostics = { enabled = true },
-		},
 	},
 }

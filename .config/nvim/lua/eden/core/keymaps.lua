@@ -2,10 +2,9 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 local opts = { noremap = true, silent = true }
-local set = vim.keymap.set
-local function cmd(command)
-	return table.concat({ "<Cmd>", command, "<CR>" })
-end
+local set = vim.keymaps.set
+local api = vim.api
+local cmd = vim.cmd
 
 set({ "n", "i", "v" }, "<F1>", "<nop>")
 set({ "n", "v" }, "<C-Down>", "}", { desc = "Paragraph down" })
@@ -13,11 +12,6 @@ set({ "n", "v" }, "<C-Up>", "{", { desc = "Paragraph up" })
 set("n", "H", ":tabnext<CR>", { noremap = true, silent = true })
 set("n", "L", ":tabprevious<CR>", { noremap = true, silent = true })
 set("n", "<leader>tb", ":tabnew<CR>", { noremap = true, silent = true })
-
-set("n", "<C-w>z", cmd("WindowsMaximize"), { desc = "Maxmizie current window in all directions (Focus)" })
-set("n", "<C-w>_", cmd("WindowsMaximizeVertically"), { desc = "Maximize current window vertically" })
-set("n", "<C-w>|", cmd("WindowsMaximizeHorizontally"), { desc = "Maximize current window horizontlly" })
-set("n", "<C-w>=", cmd("WindowsEqualize"), { desc = "Equalize size of all windows" })
 
 set("v", "J", ":m '>+1<CR>gv=gv", { desc = "moves lines down in visual selection" })
 set("v", "K", ":m '<-2<CR>gv=gv", { desc = "moves lines up in visual selection" })
@@ -40,31 +34,29 @@ set(
 )
 set("v", "<c-x>", [[y:%s/<C-r>"/<C-r>"/gI<Left><Left><Left>]], { desc = "Replace selected text globally" })
 
-vim.api.nvim_create_autocmd("TextYankPost", {
+api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking (copying) text",
-	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	group = api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
 	callback = function()
 		vim.hl.on_yank()
 	end,
 })
 
-set("n", "<leader>fp", function()
-	local filePath = vim.fn.expand("%:~")
-	vim.fn.setreg("+", filePath)
-	print("File path copied to clipboard: " .. filePath)
-end, { desc = "Copy file path to clipboard" })
-
-vim.keymap.set({ "n", "i", "v" }, "<C-s>", function()
-	vim.cmd("wall")
-	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
+set({ "n", "i", "v" }, "<C-s>", function()
+	cmd("wall")
+	api.nvim_feedkeys(api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
 end, { desc = "Save all buffers" })
 
 set("n", "<leader>qq", function()
-	vim.cmd("q!")
+	cmd("q!")
+end, { desc = "Quit once without saving" })
+
+set("n", "<leader>Q", function()
+	cmd("qall!")
 end, { desc = "Quit all without saving" })
 
 local isLspDiagnosticsVisible = true
-vim.keymap.set("n", "<leader>lx", function()
+set("n", "<leader>lx", function()
 	isLspDiagnosticsVisible = not isLspDiagnosticsVisible
 	vim.diagnostic.config({
 		virtual_text = isLspDiagnosticsVisible,
@@ -72,4 +64,4 @@ vim.keymap.set("n", "<leader>lx", function()
 	})
 end, { desc = "Toggle LSP diagnostics" })
 
-vim.keymap.set("n", "<leader>zf", "<cmd>:Focus<CR>", {})
+set("n", "<leader>zf", "<cmd>:Focus<CR>", {})

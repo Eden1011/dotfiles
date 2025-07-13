@@ -35,8 +35,5 @@ alias shadowmp3="shadowmp3.sh"
 
 export QT_QPA_PLATFORM=wayland
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-export PATH=$PATH:/home/krzys1234/.sdkman/candidates/groovy/current/bin:/home/krzys1234/.sdkman/candidates/gradle/current/bin:/home/krzys1234/.sdkman/candidates/java/current/bin:/home/krzys1234/.local/bin:/usr/local/bin:/usr/bin:/bin:/home/krzys1234/ShadowMP3
-. "/home/krzys1234/.deno/env"
