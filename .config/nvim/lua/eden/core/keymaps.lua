@@ -9,6 +9,10 @@ local cmd = vim.cmd
 set({ "n", "i", "v" }, "<F1>", "<nop>")
 set({ "n", "v" }, "<C-Down>", "}", { desc = "Paragraph down" })
 set({ "n", "v" }, "<C-Up>", "{", { desc = "Paragraph up" })
+
+set("n", "<A-h>", ":bprev<CR>", { noremap = true, silent = true })
+set("n", "<A-l>", ":bnext<CR>", { noremap = true, silent = true })
+
 set("n", "H", ":tabnext<CR>", { noremap = true, silent = true })
 set("n", "L", ":tabprevious<CR>", { noremap = true, silent = true })
 set("n", "<leader>tb", ":tabnew<CR>", { noremap = true, silent = true })
@@ -55,13 +59,17 @@ set("n", "<leader>Q", function()
 	cmd("qall!")
 end, { desc = "Quit all without saving" })
 
-local isLspDiagnosticsVisible = true
-set("n", "<leader>lx", function()
-	isLspDiagnosticsVisible = not isLspDiagnosticsVisible
-	vim.diagnostic.config({
-		virtual_text = isLspDiagnosticsVisible,
-		underline = isLspDiagnosticsVisible,
-	})
-end, { desc = "Toggle LSP diagnostics" })
-
 set("n", "<leader>zf", "<cmd>:Focus<CR>", {})
+
+set("n", "<leader>l", function()
+	if vim.diagnostic.is_enabled() then
+		vim.diagnostic.hide()
+	else
+		vim.diagnostic.show()
+	end
+end, { desc = "Disable diagnostics" })
+
+set("n", "<leader>cp", function()
+	local path = vim.fn.expand("%:p")
+	vim.fn.setreg("+", path)
+end, { desc = "Copy current absolute file path" })

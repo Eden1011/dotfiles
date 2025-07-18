@@ -10,7 +10,7 @@ local function close_hidden_buffers()
 
 	for _, bufnr in ipairs(vim.api.nvim_list_bufs()) do
 		if vim.api.nvim_buf_is_loaded(bufnr) and not visible_buffers[bufnr] then
-			pcall(vim.api.nvim_buf_delete, bufnr, {})
+			pcall(vim.api.nvim_buf_delete, bufnr, { force = true })
 		end
 	end
 end
@@ -18,5 +18,5 @@ end
 vim.keymap.set("n", "<leader>bo", close_hidden_buffers, {
 	noremap = true,
 	silent = true,
-	desc = "Close hidden buffers",
+	desc = "Close hidden buffers forcefully, without saving changes",
 })

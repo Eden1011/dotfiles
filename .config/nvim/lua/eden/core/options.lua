@@ -6,10 +6,9 @@ vim.g.editorconfig = true
 opt.nu = true
 opt.relativenumber = true
 
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 4
---opt.expandtab = true
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
 opt.autoindent = true
 opt.smartindent = true
 opt.wrap = false
@@ -17,6 +16,7 @@ opt.wrap = false
 opt.swapfile = false
 opt.backup = false
 opt.undofile = true
+opt.autoread = true
 
 opt.incsearch = true
 opt.inccommand = "split"
