@@ -13,5 +13,6 @@ Sub-dependencies: `tpm`, `fzf` (otherwise tmux-sessionx wont launch).
 Having problems with `eslint_d`?
 
 - If Mason couldn't didn't find it then install it with `npm -g eslint_d`
-- If `ts_ls` won't start on a `js` file, and you get an error regarding linting: > Could not parse linter output due to: Expected value but found invalid token at character 1 output: Error: Could not find config file.
-  Then you must run `npm init @eslint/config@latest` inside the `js` project repo.
+- If `ts_ls` won't start on a `js` file, and you get an error regarding linting:
+    > Could not parse linter output due to: Expected value but found invalid token at character 1 output: Error: Could not find config file.
+    Then you must run `npm init @eslint/config@latest` inside the `js` project repo.
