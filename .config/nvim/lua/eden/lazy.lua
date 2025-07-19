@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	spec = {
 		{ import = "eden.plugins" },
-		{ import = "eden.plugins.lsp" }, 
+		{ import = "eden.plugins.lsp" },
 	},
 	checker = {
 		enabled = true,

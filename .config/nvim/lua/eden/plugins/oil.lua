@@ -4,8 +4,8 @@ return {
 	config = function()
 		require("oil").setup({
 			default_file_explorer = true,
-			columns = { "icon" },
-			watch_for_changes = false,
+			columns = {},
+			watch_for_changes = true,
 			constrain_cursor = "name",
 			use_default_keymaps = false,
 			keymaps = {

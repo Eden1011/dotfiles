@@ -6,15 +6,15 @@ local set = vim.keymap.set
 local api = vim.api
 local cmd = vim.cmd
 
-set({ "n", "i", "v" }, "<F1>", "<nop>")
+set({ "n", "i", "v" }, "<F1>", "<nop>", { desc = "Prevent from accidentally hitting F1" })
 set({ "n", "v" }, "<C-Down>", "}", { desc = "Paragraph down" })
 set({ "n", "v" }, "<C-Up>", "{", { desc = "Paragraph up" })
 
-set("n", "<A-h>", ":bprev<CR>", { noremap = true, silent = true })
-set("n", "<A-l>", ":bnext<CR>", { noremap = true, silent = true })
+set("n", "H", ":bprev<CR>", { noremap = true, silent = true })
+set("n", "L", ":bnext<CR>", { noremap = true, silent = true })
 
-set("n", "H", ":tabnext<CR>", { noremap = true, silent = true })
-set("n", "L", ":tabprevious<CR>", { noremap = true, silent = true })
+set("n", "<A-h>", ":tabnext<CR>", { noremap = true, silent = true })
+set("n", "<A-l>", ":tabprevious<CR>", { noremap = true, silent = true })
 set("n", "<leader>tb", ":tabnew<CR>", { noremap = true, silent = true })
 
 set("v", "J", ":m '>+1<CR>gv=gv", { desc = "moves lines down in visual selection" })
