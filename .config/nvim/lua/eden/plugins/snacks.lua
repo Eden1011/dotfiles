@@ -14,9 +14,12 @@ return {
 				enabled = true,
 				timeout = 3000,
 			},
-			picker = { enabled = true, layout = {
-				preset = "ivy",
-			} },
+			picker = {
+				enabled = true,
+				layout = {
+					preset = "ivy",
+				},
+			},
 			quickfile = { enabled = true },
 			scope = { enabled = true },
 			scroll = { enabled = true },
@@ -269,6 +272,13 @@ return {
 					Snacks.bufdelete()
 				end,
 				desc = "Delete Buffer",
+			},
+			{
+				"<leader>bo",
+				function()
+					Snacks.bufdelete.other()
+				end,
+				desc = "Delete all other buffers",
 			},
 			{
 				"<leader>nr",

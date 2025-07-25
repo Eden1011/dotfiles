@@ -5,7 +5,7 @@ return {
 	config = function()
 		require("onedarkpro").setup({
 			highlights = {
-				Visual = { bg = "#3347a1", fg = "#ABB2BF" },
+				Visual = { bg = "#3347A1", fg = "#ABB2BF" },
 			},
 			options = {
 				terminal_colors = false,

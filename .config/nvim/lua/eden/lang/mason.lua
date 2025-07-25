@@ -1,10 +1,10 @@
 return {
 	"williamboman/mason.nvim",
+	build = ":MasonUpdate",
 	lazy = false,
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		"hrsh7th/cmp-nvim-lsp",
 		"neovim/nvim-lspconfig",
 	},
 	config = function()
@@ -28,13 +28,12 @@ return {
 				"lua_ls",
 				"html",
 				"cssls",
-				"tailwindcss",
 				"gopls",
-				"emmet_ls",
-				"emmet_language_server",
 				"marksman",
 				"pyright",
 				"ts_ls",
+				"clangd",
+				"rust_analyzer",
 			},
 		})
 
@@ -45,10 +44,9 @@ return {
 				"gofumpt",
 				"goimports",
 				"isort",
-				"clangd",
-				"denols",
 				"black",
 				"eslint_d",
+				"shfmt",
 			},
 		})
 	end,

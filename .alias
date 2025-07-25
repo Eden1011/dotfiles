@@ -7,9 +7,3 @@ alias gc="git commit -m 'commitmsg'"
 alias gpp="ga;gs;gc;gp"
 
 alias n="nvim"
-alias c="clear"
-
-alias log_as_kg="git config user.name 'kglowka'; git config user.email 'k.glowka.235@studms.ug.ed'"
-alias log_as_ed="git config user.name 'Eden1011'; git config user.email 'glovkakrzys252@gmail.com'"
-
-alias shadowmp3="shadowmp3.sh"

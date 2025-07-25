@@ -41,4 +41,4 @@ opt.clipboard:append("unnamedplus")
 opt.hlsearch = true
 opt.mouse = "a"
 
-vim.opt.cmdheight = 0
+opt.cmdheight = 0

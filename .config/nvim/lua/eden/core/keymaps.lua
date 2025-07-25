@@ -4,18 +4,15 @@ vim.g.maplocalleader = " "
 local opts = { noremap = true, silent = true }
 local set = vim.keymap.set
 local api = vim.api
-local cmd = vim.cmd
 
-set({ "n", "i", "v" }, "<F1>", "<nop>", { desc = "Prevent from accidentally hitting F1" })
-set({ "n", "v" }, "<C-Down>", "}", { desc = "Paragraph down" })
-set({ "n", "v" }, "<C-Up>", "{", { desc = "Paragraph up" })
+set({ "n", "i", "v" }, "<F1>", "<nop>", opts)
 
-set("n", "H", ":bprev<CR>", { noremap = true, silent = true })
-set("n", "L", ":bnext<CR>", { noremap = true, silent = true })
+set("n", "H", ":bprev<CR>", opts)
+set("n", "L", ":bnext<CR>", opts)
 
-set("n", "<A-h>", ":tabnext<CR>", { noremap = true, silent = true })
-set("n", "<A-l>", ":tabprevious<CR>", { noremap = true, silent = true })
-set("n", "<leader>tb", ":tabnew<CR>", { noremap = true, silent = true })
+set("n", "<A-h>", ":tabnext<CR>", opts)
+set("n", "<A-l>", ":tabprevious<CR>", opts)
+set("n", "<leader>tb", ":tabnew<CR>", opts)
 
 set("v", "J", ":m '>+1<CR>gv=gv", { desc = "moves lines down in visual selection" })
 set("v", "K", ":m '<-2<CR>gv=gv", { desc = "moves lines up in visual selection" })
@@ -23,13 +20,8 @@ set("v", "K", ":m '<-2<CR>gv=gv", { desc = "moves lines up in visual selection" 
 set("v", "<", "<gv", opts)
 set("v", ">", ">gv", opts)
 
-set("n", "<leader>Y", [["+Y]], opts)
-
-set({ "n", "v" }, "<leader>d", [["_d]])
-
-set("n", "<leader>f", vim.lsp.buf.format)
-
 set("n", "<Esc>", ":nohl<CR>", { desc = "Clear search highlight", silent = true })
+
 set(
 	"n",
 	"<c-x>",
@@ -47,19 +39,11 @@ api.nvim_create_autocmd("TextYankPost", {
 })
 
 set({ "n", "i", "v" }, "<C-s>", function()
-	cmd("wall")
-	api.nvim_feedkeys(api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
-end, { desc = "Save all buffers" })
+	vim.cmd("wall")
+	print("Saved changes to all buffers")
+end, opts)
 
-set("n", "<leader>qq", function()
-	cmd("q!")
-end, { desc = "Quit once without saving" })
-
-set("n", "<leader>Q", function()
-	cmd("qall!")
-end, { desc = "Quit all without saving" })
-
-set("n", "<leader>zf", "<cmd>:Focus<CR>", {})
+set("n", "<leader>z", "<cmd>:Focus<CR>", opts)
 
 set("n", "<leader>l", function()
 	if vim.diagnostic.is_enabled() then
@@ -67,9 +51,13 @@ set("n", "<leader>l", function()
 	else
 		vim.diagnostic.show()
 	end
-end, { desc = "Disable diagnostics" })
+end, { desc = "Toggle diagnostics" })
 
 set("n", "<leader>cp", function()
 	local path = vim.fn.expand("%:p")
+	if path:match("^oil://") then
+		path = path:gsub("^oil://", "")
+	end
 	vim.fn.setreg("+", path)
+	print("Copied path to system clipboard: " .. path)
 end, { desc = "Copy current absolute file path" })
