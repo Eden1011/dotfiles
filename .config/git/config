@@ -9,6 +9,7 @@
 	st = status
 	unstage = "restore --staged"
 	last = "log -1 --patch --stat HEAD"
+	publish = "commit -a"
 
 [commit]
 	verbose = true
