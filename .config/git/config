@@ -2,6 +2,14 @@
 	name = Eden1011 
 	email = glovkakrzys252@gmail.com
 
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = "restore --staged"
+	last = "log -1 --patch --stat HEAD"
+
 [commit]
 	verbose = true
 

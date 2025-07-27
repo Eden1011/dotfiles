@@ -1,9 +1,3 @@
 alias playlist="mpv --no-video https://www.youtube.com/playlist?list=PLW2t6sJ0lzE1sdVqyeiMq9-u7gWyJUjmr"
 
-alias ga="git add ."
-alias gs="git status"
-alias gp="git push"
-alias gc="git commit -m 'commitmsg'"
-alias gpp="ga;gs;gc;gp"
-
 alias n="nvim"
