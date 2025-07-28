@@ -15,7 +15,7 @@ Don't forget:
 - `ZZ` exits from nvim with saving, and `ZQ` exits without saving.
 
 <details>
-<summary>Install the following packages (**keep updating this**)</summary>
+<summary>Install the following packages:</summary>
 
 - `git`
 - `kdiff3`
@@ -36,7 +36,8 @@ Don't forget:
 
 <details>
 <summary>Download these languages:</summary>
--`rust`
--`zig`
--`go`
+
+- `rust`
+- `zig`
+- `go`
 </details>
