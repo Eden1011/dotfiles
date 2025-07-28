@@ -4,11 +4,14 @@
 
 [alias]
 	co = checkout
+	sw = switch
 	br = branch
 	ci = commit
 	st = status
+	mg = merge
 	unstage = "restore --staged"
 	last = "log -1 --patch --stat HEAD"
+	graph = "log --all --oneline --decorate --graph"
 	publish = "commit -a"
 
 [commit]
