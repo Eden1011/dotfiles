@@ -9,6 +9,8 @@
 	ci = commit
 	st = status
 	mg = merge
+	pl = pull
+	pu = push
 	unstage = "restore --staged"
 	last = "log -1 --patch --stat HEAD"
 	graph = "log --all --oneline --decorate --graph"
