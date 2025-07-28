@@ -14,21 +14,29 @@ Don't forget:
 
 - `ZZ` exits from nvim with saving, and `ZQ` exits without saving.
 
-Install the following packages (**keep updating this**):
+<details>
+<summary>Install the following packages (**keep updating this**)</summary>
 
-- git
-- kdiff3
-- bat
-- zoxide
-- fzf
-- ripgrep
-- tpm
-- alacritty
-- stow
-- mpv
-- zip
-- treesitter (yes, the system package, need the cli)
-- tmux
-- sdkman
+- `git`
+- `kdiff3`
+- `bat`
+- `zoxide`
+- `fzf`
+- `ripgrep`
+- `tpm`
+- `alacritty`
+- `stow`
+- `mpv`
+- `zip`
+- `treesitter` (yes, the system package, need the cli)
+- `tmux`
+- `sdkman`
 
-- Languages: rust, zig, go
+</details>
+
+<details>
+<summary>Download these languages:</summary>
+-`rust`
+-`zig`
+-`go`
+</details>
