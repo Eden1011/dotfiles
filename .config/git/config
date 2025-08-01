@@ -6,15 +6,22 @@
 	co = checkout
 	sw = switch
 	br = branch
+	brv= branch -vv
 	ci = commit
 	st = status
 	mg = merge
+	mgtool = mergetool
 	pl = pull
 	pu = push
+	fe = fetch
+	re = remote 
 	unstage = "restore --staged"
 	last = "log -1 --patch --stat HEAD"
 	graph = "log --all --oneline --decorate --graph"
 	publish = "commit -a"
+
+[credential]
+	helper = cache
 
 [merge]
 	tool = kdiff3
