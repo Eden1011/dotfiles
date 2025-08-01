@@ -14,7 +14,8 @@
 	pl = pull
 	pu = push
 	fe = fetch
-	re = remote 
+	re = remote
+	rb = rebase
 	unstage = "restore --staged"
 	last = "log -1 --patch --stat HEAD"
 	graph = "log --all --oneline --decorate --graph"
