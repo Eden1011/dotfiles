@@ -16,6 +16,7 @@
 	fe = fetch
 	re = remote
 	rb = rebase
+	amend = commit --amend 
 	whitespace = diff --check
 	unstage = "restore --staged"
 	last = "log -1 --patch --stat HEAD"
