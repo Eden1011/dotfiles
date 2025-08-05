@@ -5,11 +5,12 @@ Input the following one-liner into your terminal:
 ```bash
 git clone https://github.com/Eden1011/dotfiles.git && 
 cd $HOME/dotfiles && sudo ./packages && 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && 
-curl -s "https://get.sdkman.io" && 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tmp && 
+curl -s "https://get.sdkman.io" | bash && 
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh" && 
 sdk install java && 
-[ -f $HOME/.bashrc ] && rm $HOME/.bashrc && stow -t $HOME .
+[ -f $HOME/.bashrc ] && rm $HOME/.bashrc && 
+cd $HOME/dotfiles && stow -t $HOME .
 ```
 
 As for `tmux` please fetch plugins on first startup with `Prefix + I`. 
