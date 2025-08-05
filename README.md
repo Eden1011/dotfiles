@@ -1,43 +1,36 @@
-# Dotfiles
+# Installation
 
-Managed using GNU Stow.
+```bash
+git clone https://github.com/Eden1011/dotfiles.git
+```
 
-Place repo into `$HOME`, then use `stow -t $HOME .` to symlink the inner `.config`.
+```bash
+cd $HOME/dotfiles && sudo ./packages
+```
 
-Problem stowing? Use the `-R` flag to restow, or just delete the conflicting files and rerun the above command.
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
 
-Dependencies are: `alacritty`, `nvim`, `tmux` (fetch plugins on first startup of `tmux` with `Prefix + I`).
+```bash
+curl -s "https://get.sdkman.io" | bash
+```
 
-Sub-dependencies: `tpm`, `fzf`, `rg` (`ripgrep`)
+```bash
+sdk install java
+```
 
-Don't forget:
+```bash
+[ -f $HOME/.bashrc ] && rm $HOME/.bashrc
+```
 
-- `ZZ` exits from nvim with saving, and `ZQ` exits without saving.
+```bash
+cd $HOME/dotfiles && stow -t $HOME .
+```
 
-<details>
-<summary>Install the following packages:</summary>
+As for `tmux` please fetch plugins on first startup of with `Prefix + I`. `Neovim` plugins will get cloned by default.
 
-- `git`
-- `kdiff3`
-- `bat`
-- `zoxide`
-- `fzf`
-- `ripgrep`
-- `tpm`
-- `alacritty`
-- `stow`
-- `mpv`
-- `zip`
-- `treesitter` (yes, the system package, need the cli)
-- `tmux`
-- `sdkman`
 
-</details>
+# Don't forget:
 
-<details>
-<summary>Download these languages:</summary>
-
-- `rust`
-- `zig`
-- `go`
-</details>
+- `ZZ` exits from `nvim` with saving, and `ZQ` exits without saving.
