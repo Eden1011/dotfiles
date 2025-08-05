@@ -1,34 +1,20 @@
 # Installation
 
-```bash
-git clone https://github.com/Eden1011/dotfiles.git
-```
+Input the following one-liner into your terminal:
 
 ```bash
-cd $HOME/dotfiles && sudo ./packages
+git clone https://github.com/Eden1011/dotfiles.git && 
+cd $HOME/dotfiles && sudo ./packages && 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && 
+curl -s "https://get.sdkman.io" && 
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh" && 
+sdk install java && 
+[ -f $HOME/.bashrc ] && rm $HOME/.bashrc && stow -t $HOME .
 ```
 
-```bash
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
+As for `tmux` please fetch plugins on first startup with `Prefix + I`. 
 
-```bash
-curl -s "https://get.sdkman.io" | bash
-```
-
-```bash
-sdk install java
-```
-
-```bash
-[ -f $HOME/.bashrc ] && rm $HOME/.bashrc
-```
-
-```bash
-cd $HOME/dotfiles && stow -t $HOME .
-```
-
-As for `tmux` please fetch plugins on first startup of with `Prefix + I`. `Neovim` plugins will get cloned by default.
+`Nvim` plugins will get cloned by default on startup.
 
 
 # Don't forget:
