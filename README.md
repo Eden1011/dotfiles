@@ -15,7 +15,7 @@ cd $HOME/dotfiles && stow -t $HOME .
 
 As for `tmux` please fetch plugins on first startup with `Prefix + I`. 
 
-`Nvim` plugins will get cloned by default on startup.
+Plugins for `nvim` get downloaded on program boot.
 
 
 # Don't forget:
