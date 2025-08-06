@@ -32,7 +32,3 @@ Other steps:
 
 - Run `tmux` and press `Prefix + I` to fetch plugins.
 - Run `nvim` to download `Lua` plugins.
-
-# Don't forget:
-
-- `ZZ` exits from `nvim` with saving, and `ZQ` exits without saving.
