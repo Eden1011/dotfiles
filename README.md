@@ -2,20 +2,29 @@
 
 Input the following one-liner into your terminal:
 
+Step 1: Clone the repository and install packages
 ```bash
-git clone https://github.com/Eden1011/dotfiles.git && 
-cd $HOME/dotfiles && sudo ./packages && 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tmp && 
-curl -s "https://get.sdkman.io" | bash && 
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh" && 
-sdk install java && 
-[ -f $HOME/.bashrc ] && rm $HOME/.bashrc && 
-cd $HOME/dotfiles && stow -t $HOME .
+git clone https://github.com/Eden1011/dotfiles.git && cd $HOME/dotfiles && sudo ./packages
 ```
 
-As for `tmux` please fetch plugins on first startup with `Prefix + I`. 
+Step 2: Install sub-dependencies
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tmp && curl -s "https://get.sdkman.io" | bash
+```
+Step 2.5: Install `Java 21` with `SDKMAN`:
+```bash
+sdk install java
+```
+Step 3: Remove old `.bashrc` if it exists, and stow dotfiles
+```bash
+[ -f $HOME/.bashrc ] && rm $HOME/.bashrc
 
-Plugins for `nvim` get downloaded on program boot.
+cd $HOME/dotfiles && stow -t $HOME .
+```
+Other steps:
+
+- Run `tmux` and press `Prefix + I` to fetch plugins. 
+- Run `nvim` to download `Lua` plugins.
 
 
 # Don't forget:

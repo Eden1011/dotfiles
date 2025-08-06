@@ -36,6 +36,7 @@ return {
 					"java",
 					"elixir",
 					"rust",
+					"regex",
 				},
 
 				sync_install = false,
