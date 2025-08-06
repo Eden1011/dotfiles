@@ -35,6 +35,8 @@ PACKAGES=(
 	"fd"
 	"lazygit"
 	"sqlite3"
+	"alsa-firmware"
+	"sof-firmware"
 
 )
 
