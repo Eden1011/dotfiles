@@ -2,25 +2,25 @@
 
 Input the following steps into your terminal:
 
-Step 1: Clone the repository and install packages
+**Step 1**: Clone the repository and install packages
 
 ```bash
 git clone https://github.com/Eden1011/dotfiles.git && cd $HOME/dotfiles && sudo ./packages
 ```
 
-Step 2: Install sub-dependencies
+**Step 2**: Install sub-dependencies
 
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tmp && curl -s "https://get.sdkman.io" | bash
 ```
 
-Step 2.5: Install `Java 21` with `SDKMAN`:
+**Step 2.5**: Install `Java 21` with `SDKMAN`:
 
 ```bash
 sdk install java
 ```
 
-Step 3: Remove old `.bashrc` if it exists, and stow dotfiles
+**Step 3**: Remove old `.bashrc` if it exists, and stow dotfiles
 
 ```bash
 [ -f $HOME/.bashrc ] && rm $HOME/.bashrc
