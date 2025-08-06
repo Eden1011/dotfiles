@@ -11,7 +11,7 @@ git clone https://github.com/Eden1011/dotfiles.git && cd $HOME/dotfiles && sudo 
 **Step 2**: Install `tpm`:
 
 ```bash
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tmp
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 **Step 2.5**: Install `Java 21` with `SDKMAN`:
