@@ -17,6 +17,7 @@
 	re = remote
 	rb = rebase
 	sh = show
+	cp = cherry-pick
 	amend = commit --amend 
 	whitespace = diff --check
 	unstage = "restore --staged"
