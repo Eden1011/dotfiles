@@ -8,6 +8,9 @@ test -f ~/.alias && . ~/.alias
 set -o vi
 bind -m vi-command '"\e[2~": vi-insertion-mode'
 
+#Ignore ^D from exiting terminal
+set -o ignoreeof
+
 FORMAT_RESET="\e[0m"
 HOST="\e[0;32m"
 COLON="\e[0;37m"
