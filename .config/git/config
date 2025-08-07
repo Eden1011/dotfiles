@@ -16,6 +16,7 @@
 	fe = fetch
 	re = remote
 	rb = rebase
+	sh = show
 	amend = commit --amend 
 	whitespace = diff --check
 	unstage = "restore --staged"
