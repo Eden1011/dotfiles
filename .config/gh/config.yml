@@ -8,7 +8,7 @@ aliases:
   co: pr checkout
   st: status
   rp: repo
-  iss: issue
+  is: issue
   web: browse
 http_unix_socket:
 browser: firefox
