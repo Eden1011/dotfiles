@@ -25,6 +25,9 @@
 	graph = "log --all --oneline --decorate --graph"
 	publish = "commit -a"
 
+[rerere]
+	enabled = true
+
 [credential]
 	helper = cache
 
