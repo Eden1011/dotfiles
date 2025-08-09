@@ -18,6 +18,9 @@
 	rb = rebase
 	sh = show
 	cp = cherry-pick
+	db = describe
+	ac = archive
+	sl = shortlog
 	amend = commit --amend 
 	whitespace = diff --check
 	unstage = "restore --staged"

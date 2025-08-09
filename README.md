@@ -31,5 +31,4 @@ cd $HOME/dotfiles && stow -t $HOME .
 Other steps:
 
 - Run `tmux` and press `Prefix + I` to fetch plugins.
-  If nothing is happening, inside `tmux` use command `source-file ~/dotfiles/.config/tmux/tmux.conf` - if it returns code 127 then you have a faulty `tpm` installation.
 - Run `nvim` to download `Lua` plugins.
