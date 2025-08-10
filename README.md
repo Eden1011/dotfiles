@@ -25,7 +25,7 @@ sdk install java
 
 ```bash
 [ -f $HOME/.bashrc ] && rm $HOME/.bashrc
-cd $HOME/dotfiles && stow -t $HOME .
+cd $HOME/dotfiles && chmod 600 .config/glab-cli/aliases.yml && stow -t $HOME .
 ```
 
 Other steps:

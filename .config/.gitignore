@@ -14,3 +14,4 @@ alacritty/*
 LICENSE
 lazy-lock.json
 gh/hosts.yml
+glab-cli/config.yml
