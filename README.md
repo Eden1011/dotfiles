@@ -28,6 +28,12 @@ sdk install java
 cd $HOME/dotfiles && chmod 600 .config/glab-cli/aliases.yml && stow -t $HOME .
 ```
 
+**Step 4**: Auth into git providers:
+
+```bash
+gh auth login && gl auth login
+```
+
 Other steps:
 
 - Run `tmux` and press `Prefix + I` to fetch plugins.
