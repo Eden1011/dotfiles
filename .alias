@@ -1,3 +1,5 @@
 alias playlist="mpv --no-video https://www.youtube.com/playlist?list=PLW2t6sJ0lzE1sdVqyeiMq9-u7gWyJUjmr"
 
 alias n="nvim"
+
+alias gl="glab"

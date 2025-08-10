@@ -38,7 +38,7 @@ PACKAGES=(
 	"alsa-firmware"
 	"sof-firmware"
 	"gh"
-
+	"glab"
 )
 
 if [[ $EUID -ne 0 ]]; then
