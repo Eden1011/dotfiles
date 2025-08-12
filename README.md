@@ -25,13 +25,7 @@ sdk install java
 
 ```bash
 [ -f $HOME/.bashrc ] && rm $HOME/.bashrc
-cd $HOME/dotfiles && chmod 600 .config/glab-cli/aliases.yml && stow -t $HOME .
-```
-
-**Step 4**: Auth into git providers:
-
-```bash
-gh auth login && gl auth login
+cd $HOME/dotfiles && stow -t $HOME .
 ```
 
 Other steps:

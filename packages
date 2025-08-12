@@ -37,8 +37,6 @@ PACKAGES=(
 	"sqlite3"
 	"alsa-firmware"
 	"sof-firmware"
-	"gh"
-	"glab"
 )
 
 if [[ $EUID -ne 0 ]]; then
