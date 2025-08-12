@@ -34,6 +34,7 @@ return {
 				"ts_ls",
 				"clangd",
 				"rust_analyzer",
+				"jdtls",
 			},
 		})
 
@@ -47,6 +48,7 @@ return {
 				"black",
 				"eslint_d",
 				"shfmt",
+				"google-java-format",
 			},
 		})
 	end,
