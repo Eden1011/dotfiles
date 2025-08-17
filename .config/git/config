@@ -44,6 +44,7 @@
 
 [merge]
 	tool = kdiff3
+	conflictstyle = diff3
 
 [commit]
 	verbose = true
