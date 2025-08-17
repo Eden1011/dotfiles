@@ -24,6 +24,11 @@
 	rl = reflog
 	sa = stash
 	cn = clean
+	rs = reset
+	rt = restore
+	cat= cat-file
+	tree= ls-tree
+	files= ls-files
 	amend = commit --amend 
 	whitespace = diff --check
 	unstage = "restore --staged"
