@@ -37,7 +37,7 @@ PACKAGES=(
 	"sqlite3"
 	"alsa-firmware"
 	"sof-firmware"
-	"maven"
+	"git-lfs"
 )
 
 if [[ $EUID -ne 0 ]]; then

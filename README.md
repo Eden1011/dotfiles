@@ -14,11 +14,11 @@ git clone https://github.com/Eden1011/dotfiles.git && cd $HOME/dotfiles && sudo 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-**Step 2.5**: Install `Java` and `Gradle` with `SDKMAN`:
+**Step 2.5**: Install sdk's with `SDKMAN`:
 
 ```bash
 curl -s "https://get.sdkman.io" | bash
-sdk install java && sdk install gradle
+sdk install java && sdk install gradle && sdk install maven && sdk install groovy
 ```
 
 **Step 3**: Remove old `.bashrc` if it exists, and stow:

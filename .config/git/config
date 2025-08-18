@@ -14,6 +14,7 @@
 	pl = pull
 	pu = push
 	fe = fetch
+	fent = fetch --no-tags
 	re = remote
 	rb = rebase
 	sh = show
@@ -26,6 +27,7 @@
 	cn = clean
 	rs = reset
 	rt = restore
+	rv = revert
 	cat= cat-file
 	tree= ls-tree
 	files= ls-files
@@ -35,6 +37,7 @@
 	last = "log -1 --patch --stat HEAD"
 	graph = "log --all --oneline --decorate --graph"
 	publish = "commit -a"
+	re3 = rerere
 
 [rerere]
 	enabled = true
@@ -96,3 +99,9 @@
 
 [url "git@gitlab.com:"]
 	insteadOf = "gl:"
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
