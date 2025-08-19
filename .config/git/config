@@ -40,6 +40,8 @@
 	re3 = rerere
 	bl = blame
 	bi = bisect
+	sbm = submodule
+	sbt = subtree
 
 [rerere]
 	enabled = true
