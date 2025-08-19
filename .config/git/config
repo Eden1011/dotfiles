@@ -38,6 +38,7 @@
 	graph = "log --all --oneline --decorate --graph"
 	publish = "commit -a"
 	re3 = rerere
+	bl = blame
 
 [rerere]
 	enabled = true
