@@ -66,6 +66,7 @@
 
 [diff]
 	renames = copies
+	submodule = log
 
 [init]
 	defaultBranch = main 
@@ -74,6 +75,7 @@
 	branch = true
 	showStash = true
 	showUntrackedFiles = all  
+	submoduleSummary = true 
 
 [pager]
 	branch = false 
