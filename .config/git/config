@@ -39,6 +39,7 @@
 	publish = "commit -a"
 	re3 = rerere
 	bl = blame
+	bi = bisect
 
 [rerere]
 	enabled = true
