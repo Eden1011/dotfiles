@@ -41,7 +41,6 @@
 	bl = blame
 	bi = bisect
 	sbm = submodule
-	sbmu = submodule update --init --recursive
 	sbt = subtree
 
 [rerere]
