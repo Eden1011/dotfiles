@@ -41,6 +41,7 @@
 	bl = blame
 	bi = bisect
 	sbm = submodule
+	sbmu = submodule update --init --recursive
 	sbt = subtree
 
 [rerere]
@@ -53,6 +54,9 @@
 [merge]
 	tool = kdiff3
 	conflictstyle = diff3
+
+[submodule]
+	recurse = true
 
 [commit]
 	verbose = true
