@@ -42,6 +42,7 @@
 	bi = bisect
 	sbm = submodule
 	sbt = subtree
+	rp = rev-parse
 
 [rerere]
 	enabled = true
