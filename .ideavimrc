@@ -1,0 +1,48 @@
+let mapleader=" "
+set number
+set relativenumber
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set autoindent
+set smartindent
+set nowrap
+set autoread
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+set scrolloff=8
+set backspace=start,eol,indent
+set splitright
+set splitbelow
+set clipboard=unnamedplus
+
+set commentary
+set exchange
+set vim-paragraph-motion
+set highlightedyank
+set NERDTree
+set textobjfunction
+
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+set ideamarks
+
+
+" press Alt+1 for tree
+map <leader>ff <Action>(GotoFile)
+map <leader>/ <Action>(FindInPath)
+map <leader>sb <Action>(Find)
+" press c-x twice on a word or variable
+nmap <c-x> <Action>(RenameElement)
+vmap <c-x> <Action>(RenameElement)
+:map <S-h> gT
+:map <S-l> gt
+:map <Leader>s <Action>(SplitVertically)
+:map <C-h> <Action>(PrevSplitter)
+:map <C-l> <Action>(PrevSplitter)
+:map <leader>z <Action>(ToggleZenMode)
+:map <leader>bd <Action>(CloseContent)
+:map <leader>bo <Action>(CloseAllEditorsButActive)
