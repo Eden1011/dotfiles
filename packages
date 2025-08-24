@@ -38,6 +38,7 @@ PACKAGES=(
 	"alsa-firmware"
 	"sof-firmware"
 	"git-lfs"
+	"libgthread-2_0-0"
 )
 
 if [[ $EUID -ne 0 ]]; then
