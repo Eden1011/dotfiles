@@ -20,7 +20,6 @@ return {
 			sh = { "shfmt" },
 			bash = { "shfmt" },
 			rust = { "rustfmt" },
-			java = { "google-java-format" },
 		},
 		default_format_opts = {
 			lsp_format = "fallback",
