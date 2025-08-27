@@ -43,6 +43,8 @@
 	sbm = submodule
 	sbt = subtree
 	rp = rev-parse
+	sbmdiff = "!git diff && git submodule foreach 'git diff'"
+	sbmpu = "push --recurse-submodules=on-demand"
 
 [rerere]
 	enabled = true
