@@ -39,6 +39,7 @@ PACKAGES=(
 	"sof-firmware"
 	"git-lfs"
 	"libgthread-2_0-0"
+	"python313-pre-commit"
 )
 
 if [[ $EUID -ne 0 ]]; then
