@@ -50,6 +50,9 @@
 	enabled = true
 	autoUpdate = true
 
+[help]
+	autocorrect = prompt
+
 [credential]
 	helper = cache
 
@@ -68,6 +71,8 @@
 	preloadindex = true  
 	editor = nvim
 	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	whitespace = "blank-at-eol,blank-at-eof,space-before-tab,tabwidth=2"
 
 [blame]
 	coloring = highlightRecent
