@@ -1,0 +1,167 @@
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Thumbnails
+.thumbnails/
+
+# --- EDITORS / IDEs ---
+# Neovim/Vim
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+Session.vim
+.netrwhist
+tags
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.idea_modules/
+
+# JetBrains IDEs (WebStorm, PhpStorm, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+cmake-build-*/
+.idea_modules/
+
+# VSCode 
+.vscode/
+*.code-workspace
+
+# --- TEMPORARY FILES ---
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*.tmp
+*.temp
+
+# Log files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- DEVELOPMENT TOOLS ---
+# Environment variables
+.env
+.env.local
+.env.*.local
+.envrc
+
+# direnv
+.envrc
+
+# Scripts
+.local-scripts/
+local-*
+
+# --- VERSION CONTROL ---
+# Patch files
+*.patch
+*.diff
+*.rej
+
+# --- COMPILED / GENERATED ---
+# Object files
+*.o
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# --- DATABASES ---
+*.sqlite
+*.sqlite3
+*.db
+
+# --- SECURITY ---
+# SSH keys
+id_rsa
+id_ecdsa
+id_ed25519
+*.pem
+*.key
+*.crt
+*.cert
+
+# GPG
+secring.*
+
+# --- PACKAGE MANAGERS ---
+# Node.js
+node_modules/
+.npm
+.yarn-integrity
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.venv/
+venv/
+ENV/
+env/
+
+# Ruby
+.bundle
+vendor/bundle
+
+# --- BUILD ARTIFACTS ---
+dist/
+build/
+target/
+bin/
+obj/
+
+# --- PROFILING / DEBUGGING ---
+*.prof
+*.trace
+core
+core.*
+vgcore.*
+
+# --- DOCUMENTATION TEMP ---
+.docusaurus
+.cache
+
+# --- MISC DEVELOPMENT ---
+# Coverage reports
+coverage/
+*.coverage
+.nyc_output
+.coverage.*
+htmlcov/
+
+# Testing
+.pytest_cache/
+.tox/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# --- SYSTEM MONITORING ---
+.htop_config

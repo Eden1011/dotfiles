@@ -67,6 +67,7 @@
 [core]
 	preloadindex = true  
 	editor = nvim
+	excludesfile = ~/.gitignore_global
 
 [blame]
 	coloring = highlightRecent
