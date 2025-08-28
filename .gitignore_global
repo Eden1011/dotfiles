@@ -8,7 +8,6 @@
 # Thumbnails
 .thumbnails/
 
-# --- EDITORS / IDEs ---
 # Neovim/Vim
 *.swp
 *.swo
@@ -27,7 +26,7 @@ tags
 out/
 .idea_modules/
 
-# JetBrains IDEs (WebStorm, PhpStorm, etc.)
+# JetBrains IDEs 
 .idea/
 *.iws
 *.iml
@@ -39,7 +38,6 @@ cmake-build-*/
 .vscode/
 *.code-workspace
 
-# --- TEMPORARY FILES ---
 # Backup files
 *.bak
 *.backup
@@ -56,7 +54,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# --- DEVELOPMENT TOOLS ---
 # Environment variables
 .env
 .env.local
@@ -70,13 +67,11 @@ yarn-error.log*
 .local-scripts/
 local-*
 
-# --- VERSION CONTROL ---
 # Patch files
 *.patch
 *.diff
 *.rej
 
-# --- COMPILED / GENERATED ---
 # Object files
 *.o
 *.so
@@ -90,12 +85,11 @@ local-*
 *.rar
 *.7z
 
-# --- DATABASES ---
+# Databases 
 *.sqlite
 *.sqlite3
 *.db
 
-# --- SECURITY ---
 # SSH keys
 id_rsa
 id_ecdsa
@@ -108,7 +102,6 @@ id_ed25519
 # GPG
 secring.*
 
-# --- PACKAGE MANAGERS ---
 # Node.js
 node_modules/
 .npm
@@ -130,25 +123,24 @@ env/
 .bundle
 vendor/bundle
 
-# --- BUILD ARTIFACTS ---
+# Build artifacts
 dist/
 build/
 target/
 bin/
 obj/
 
-# --- PROFILING / DEBUGGING ---
+# Profiling / Debugging 
 *.prof
 *.trace
 core
 core.*
 vgcore.*
 
-# --- DOCUMENTATION TEMP ---
+# Documentation / Temp 
 .docusaurus
 .cache
 
-# --- MISC DEVELOPMENT ---
 # Coverage reports
 coverage/
 *.coverage
@@ -163,5 +155,5 @@ htmlcov/
 # Jupyter Notebooks
 .ipynb_checkpoints
 
-# --- SYSTEM MONITORING ---
+# System monitoring 
 .htop_config
