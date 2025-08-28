@@ -1,6 +1,51 @@
-Subject line (try to keep under 50 characters)
+# <type>(<scope>): <subject>
+#
+# <body>
+#
+# <footer>
 
-Multi-line description of commit,
-feel free to be detailed.
-
-[Ticket: X]
+# --- COMMIT END ---
+# Type can be:
+#    feat     (new feature)
+#    fix      (bug fix)
+#    docs     (changes to documentation)
+#    style    (formatting, missing semi colons, etc; no code change)
+#    refactor (refactoring production code)
+#    test     (adding tests, refactoring test; no production code change)
+#    chore    (updating build tasks, package manager configs, etc; no production code change)
+#    perf     (performance improvements)
+#    ci       (changes to CI configuration files and scripts)
+#    build    (changes to build system or external dependencies)
+#    revert   (reverts a previous commit)
+# --------------------
+# Scope can be anything specifying place of the commit change:
+#    component, file, route, service, etc.
+# --------------------
+# Subject line rules:
+#    - Use imperative mood ("Add feature" not "Added feature")
+#    - Don't capitalize first letter
+#    - No dot (.) at the end
+#    - Keep under 50 characters
+# --------------------
+# Body rules:
+#    - Wrap at 72 characters
+#    - Use imperative mood
+#    - Explain what and why, not how
+#    - Can include multiple paragraphs
+# --------------------
+# Footer rules:
+#    - Reference issues: "Closes #123", "Fixes #456"
+#    - Breaking changes: "BREAKING CHANGE: <description>"
+#    - Co-authored-by: Name <email@example.com>
+#    - Ticket: PROJ-123
+# --------------------
+# Examples:
+#    feat(auth): add OAuth2 login support
+#    fix(api): handle null response in user service
+#    docs(readme): update installation instructions
+#    style(header): fix indentation in navigation component
+#    refactor(utils): extract common validation logic
+#    test(auth): add unit tests for login flow
+#    chore(deps): update dependencies to latest versions
+#    perf(db): optimize user query with proper indexing
+# --------------------
