@@ -62,6 +62,7 @@
 
 [commit]
 	verbose = true
+	template = ~/.gitmessage.txt
 
 [core]
 	preloadindex = true  
