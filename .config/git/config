@@ -23,6 +23,7 @@
 	ac = archive
 	sl = shortlog
 	rl = reflog
+	rlv= log -g
 	sa = stash
 	cn = clean
 	rs = reset
