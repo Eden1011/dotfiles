@@ -40,6 +40,7 @@ PACKAGES=(
 	"git-lfs"
 	"libgthread-2_0-0"
 	"python313-pre-commit"
+	"git-filter-repo"
 )
 
 if [[ $EUID -ne 0 ]]; then
