@@ -1,96 +1,52 @@
 # Linux
-*~
 .fuse_hidden*
 .directory
 .Trash-*
 .nfs*
-
-# Thumbnails
 .thumbnails/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
 # Neovim/Vim
 *.swp
 *.swo
-*~
 .*.swp
 .*.swo
 Session.vim
 .netrwhist
 tags
 
-# IntelliJ IDEA
+# JetBrains IDEs (IntelliJ, etc.)
 .idea/
 *.iws
 *.iml
 *.ipr
 out/
 .idea_modules/
-
-# JetBrains IDEs 
-.idea/
-*.iws
-*.iml
-*.ipr
 cmake-build-*/
-.idea_modules/
 
 # VSCode 
 .vscode/
 *.code-workspace
-
-# Backup files
-*.bak
-*.backup
-*.old
-*.orig
-*.save
-*.tmp
-*.temp
-
-# Log files
-*.log
-logs/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-.envrc
-
-# direnv
-.envrc
-
-# Scripts
-.local-scripts/
-local-*
 
 # Patch files
 *.patch
 *.diff
 *.rej
 
-# Object files
-*.o
-*.so
-*.dylib
-*.dll
-*.exe
-
-# Archives
-*.zip
-*.tar.gz
-*.rar
-*.7z
-
 # Databases 
 *.sqlite
 *.sqlite3
 *.db
 
-# SSH keys
+# SSH keys and certificates
 id_rsa
 id_ecdsa
 id_ed25519
@@ -102,10 +58,37 @@ id_ed25519
 # GPG
 secring.*
 
+# Scripts
+.local-scripts/
+local-*
+
+# Documentation / Temp 
+.docusaurus
+.cache
+
+# Testing
+.pytest_cache/
+.tox/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# System monitoring 
+.htop_config
+
 # Node.js
 node_modules/
 .npm
 .yarn-integrity
+.pnp
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Python
 __pycache__/
@@ -118,42 +101,158 @@ pip-delete-this-directory.txt
 venv/
 ENV/
 env/
+.pyenv
+*.egg-info/
+.mypy_cache/
+.dmypy.json
+dmypy.json
 
 # Ruby
 .bundle
 vendor/bundle
+Gemfile.lock
+.rbenv-version
+.rvmrc
+.ruby-version
+.ruby-gemset
 
-# Build artifacts
-dist/
+# Java
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# Java - Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+.gradletasknamecache
+
+# Java - Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Go
+*.test
+vendor/
+go.work
+go.work.sum
+tmp/
+
+# Rust
+Cargo.lock
+
+# C/C++
+*.d
+*.ilk
+*.map
+*.exp
+*.gch
+*.pch
+*.i*86
+*.x86_64
+*.hex
+*.dSYM/
+*.su
+*.idb
+
+# Elixir
+/_build
+/cover
+/deps
+/doc
+/.fetch
+erl_crash.dump
+*.ez
+*.beam
+/config/*.secret.exs
+.elixir_ls/
+
+# PHP
+/vendor/
+composer.phar
+composer.lock
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+
+# Kotlin
+*.hprof
+*.gradle.kts
+
+# Scala
+.history
+.cache
+.lib/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+.sbtserver/
+.sbtserver.lock
+*.sc
+
+# Common 
+*.exe
+*.exe~
+*.dll
+*.so
+*.so.*
+*.dylib
+*.out
+*.app
+*.o
+*.ko
+*.obj
+*.elf
+*.class
+*.a
+*.lib
+*.la
+*.lo
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.tmp
+*.temp
+*~
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*.log
+logs/
 build/
 target/
+dist/
 bin/
 obj/
-
-# Profiling / Debugging 
+*.pdb
 *.prof
 *.trace
 core
 core.*
 vgcore.*
-
-# Documentation / Temp 
-.docusaurus
-.cache
-
-# Coverage reports
+.env
+.env.local
+.env.*.local
+.envrc
 coverage/
 *.coverage
 .nyc_output
 .coverage.*
 htmlcov/
 
-# Testing
-.pytest_cache/
-.tox/
-
-# Jupyter Notebooks
-.ipynb_checkpoints
-
-# System monitoring 
-.htop_config
