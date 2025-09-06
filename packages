@@ -42,6 +42,7 @@ PACKAGES=(
 	"python313-pre-commit"
 	"git-filter-repo"
 	"pnpm"
+	"postgresql"
 )
 
 if [[ $EUID -ne 0 ]]; then
