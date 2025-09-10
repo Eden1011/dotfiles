@@ -31,7 +31,8 @@ set idearefactormode=keep
 set ideamarks
 
 
-" press Alt+1 for tree
+nmap <Esc> <Action>(HideActiveWindow)
+nmap <c-e> <Action>(ActivateProjectToolWindow)
 map <leader>ff <Action>(GotoFile)
 map <leader>/ <Action>(FindInPath)
 map <leader>sb <Action>(Find)
