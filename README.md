@@ -18,7 +18,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ```bash
 curl -s "https://get.sdkman.io" | bash
-sdk install java && sdk install gradle && sdk install maven && sdk install groovy
+sdk install java && sdk install gradle && sdk install maven && sdk install groovy && sdk install kotlin
 ```
 
 **Step 3**: Remove old `.bashrc` if it exists, and stow:
