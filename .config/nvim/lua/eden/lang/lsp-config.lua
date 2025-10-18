@@ -41,6 +41,7 @@ return {
 			lspconfig.ts_ls.setup({ capabilites = capabilities })
 			lspconfig.clangd.setup({ capabilites = capabilities })
 			lspconfig.rust_analyzer.setup({ capabilites = capabilities })
+			lspconfig.bashls.setup({ capabilites = capabilities })
 		end,
 	},
 }

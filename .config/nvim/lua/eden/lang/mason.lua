@@ -34,6 +34,7 @@ return {
 				"ts_ls",
 				"clangd",
 				"rust_analyzer",
+				"bashls",
 			},
 		})
 
