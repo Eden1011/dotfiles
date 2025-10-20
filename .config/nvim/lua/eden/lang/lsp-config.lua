@@ -13,8 +13,8 @@ return {
 			},
 		},
 		config = function()
+			local tools = require("eden.tools")
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
-			local lspconfig = require("lspconfig")
 
 			local signs = {
 				[vim.diagnostic.severity.ERROR] = "",
@@ -32,16 +32,12 @@ return {
 				update_in_insert = false,
 			})
 
-			lspconfig.lua_ls.setup({ capabilites = capabilities })
-			lspconfig.html.setup({ capabilities = capabilities })
-			lspconfig.cssls.setup({ capabilities = capabilities })
-			lspconfig.gopls.setup({ capabilites = capabilities })
-			lspconfig.marksman.setup({ capabilites = capabilities })
-			lspconfig.pyright.setup({ capabilites = capabilities })
-			lspconfig.ts_ls.setup({ capabilites = capabilities })
-			lspconfig.clangd.setup({ capabilites = capabilities })
-			lspconfig.rust_analyzer.setup({ capabilites = capabilities })
-			lspconfig.bashls.setup({ capabilites = capabilities })
+			for _, server in ipairs(tools.lsp_servers) do
+				vim.lsp.config(server, {
+					capabilities = capabilities,
+				})
+				vim.lsp.enable(server)
+			end
 		end,
 	},
 }

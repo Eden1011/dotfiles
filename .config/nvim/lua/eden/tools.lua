@@ -1,0 +1,81 @@
+local M = {}
+
+M.lsp_servers = {
+	"lua_ls",
+	"html",
+	"cssls",
+	"gopls",
+	"marksman",
+	"pyright",
+	"ts_ls",
+	"clangd",
+	"rust_analyzer",
+	"bashls",
+	"tinymist",
+}
+
+M.formatters_and_linters = {
+	"prettier",
+	"stylua",
+	"gofumpt",
+	"goimports",
+	"isort",
+	"black",
+	"eslint_d",
+	"shfmt",
+	"prettypst",
+}
+
+M.formatters_by_ft = {
+	go = { "goimports", "gofumpt" },
+	lua = { "stylua" },
+	javascript = { "prettier" },
+	typescript = { "prettier" },
+	javascriptreact = { "prettier" },
+	typescriptreact = { "prettier" },
+	json = { "prettier" },
+	jsonc = { "prettier" },
+	yaml = { "prettier" },
+	markdown = { "prettier" },
+	html = { "prettier" },
+	css = { "prettier" },
+	scss = { "prettier" },
+	python = { "isort", "black" },
+	sh = { "shfmt" },
+	bash = { "shfmt" },
+	rust = { "rustfmt" },
+	typst = { "prettypst" },
+}
+
+M.treesitter_parsers = {
+	"json",
+	"javascript",
+	"typescript",
+	"tsx",
+	"go",
+	"yaml",
+	"html",
+	"css",
+	"python",
+	"http",
+	"prisma",
+	"markdown",
+	"markdown_inline",
+	"svelte",
+	"graphql",
+	"bash",
+	"lua",
+	"vim",
+	"dockerfile",
+	"gitignore",
+	"query",
+	"vimdoc",
+	"c",
+	"java",
+	"elixir",
+	"rust",
+	"regex",
+	"typst",
+}
+
+return M

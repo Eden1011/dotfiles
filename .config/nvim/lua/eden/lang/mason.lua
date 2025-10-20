@@ -8,6 +8,7 @@ return {
 		"neovim/nvim-lspconfig",
 	},
 	config = function()
+		local tools = require("eden.tools")
 		local mason = require("mason")
 		local mason_lspconfig = require("mason-lspconfig")
 		local mason_tool_installer = require("mason-tool-installer")
@@ -24,31 +25,11 @@ return {
 
 		mason_lspconfig.setup({
 			automatic_enable = false,
-			ensure_installed = {
-				"lua_ls",
-				"html",
-				"cssls",
-				"gopls",
-				"marksman",
-				"pyright",
-				"ts_ls",
-				"clangd",
-				"rust_analyzer",
-				"bashls",
-			},
+			ensure_installed = tools.lsp_servers,
 		})
 
 		mason_tool_installer.setup({
-			ensure_installed = {
-				"prettier",
-				"stylua",
-				"gofumpt",
-				"goimports",
-				"isort",
-				"black",
-				"eslint_d",
-				"shfmt",
-			},
+			ensure_installed = tools.formatters_and_linters,
 		})
 	end,
 }
