@@ -12,6 +12,7 @@ M.lsp_servers = {
 	"rust_analyzer",
 	"bashls",
 	"tinymist",
+	"angularls",
 }
 
 M.formatters_and_linters = {
