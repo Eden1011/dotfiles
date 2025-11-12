@@ -13,6 +13,7 @@ M.lsp_servers = {
 	"bashls",
 	"tinymist",
 	"angularls",
+	"dockerls",
 }
 
 M.formatters_and_linters = {
