@@ -28,7 +28,7 @@ sdk install java && sdk install gradle && sdk install maven && sdk install groov
 cd $HOME/dotfiles && stow -t $HOME .
 ```
 
-**Step 4**: Download Claude Code:
+**Step 4**: Download `Claude Code`:
 
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash
