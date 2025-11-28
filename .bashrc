@@ -32,3 +32,6 @@ eval "$(zoxide init --cmd cd bash)"
 
 #SDKMAN sourcing in current shell (binary is called `sdk`)
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+#Opencode
+export PATH=/home/krzys1234/.opencode/bin:$PATH
