@@ -23,7 +23,6 @@ PACKAGES=(
 	"rust"
 	"make"
 	"cmake"
-	"libopenh264-7"
 	"libopenh264-8-32bit"
 	"mozilla-openh264"
 	"composer"
@@ -45,6 +44,7 @@ PACKAGES=(
 	"postgresql"
 	"zlib-devel"
 	"minikube"
+	"gnu_parallel"
 )
 
 if [[ $EUID -ne 0 ]]; then
