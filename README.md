@@ -9,22 +9,12 @@ git clone https://github.com/Eden1011/dotfiles.git $HOME/dotfiles && cd $HOME/do
 chmod +x run && chmod +x runs/*
 ```
 
-**Step 2**: Dry run the `run` script to check if it's okay:
+**Step 2**: Execute the `run` script in one of the several ways:
 
 ```bash
-./run --dry-run
-```
-
-If it's okay, proceed like so:
-
-```bash
-./run
-```
-
-or add a (fuzzy) filter to run specific files:
-
-```bash
-./run ack # This will match `packages`, 'ackerman', and so on...
+./run --dry-run # Check what will be executed
+./run ack       # This will execute `packages`, 'ackerman', and so on...
+./run           # This will execute all
 ```
 
 **Step 2**: Install `opencode`:
