@@ -21,11 +21,3 @@ Other steps:
 
 - Run `tmux` and press `Prefix + I` to fetch plugins.
 - Run `nvim` to download `Lua` plugins.
-
-Note:
-
-- If `tmux -V` < 3.6, then run `opencode` outside a `tmux` session because the `system` theme doesn't work.
-
-```
-
-```
