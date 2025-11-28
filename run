@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 script_dir="$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
 
 filter=""
@@ -52,3 +54,14 @@ for script in $scripts; do
 done
 
 log "exit successfully..."
+
+if [[ $dry == true ]]; then
+	echo
+	read -p "Do you want to run everything? (y/N): " response
+	if [[ "$response" =~ ^[Yy]$ ]]; then
+		clear
+		exec "$script_dir/run"
+	else
+		exit 0
+	fi
+fi

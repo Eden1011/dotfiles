@@ -6,25 +6,14 @@ Input the following steps into your terminal:
 
 ```bash
 git clone https://github.com/Eden1011/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles
-chmod +x run && chmod +x runs/*
+chmod +x run && chmod +x runs/* && ./run --dry-run
 ```
 
-**Step 2**: Execute the `run` script in one of the several ways:
+Aaaaand you're done!
+If you want you can continue by importing the manual assets below, but so far, you've
+successfully set up these dotfiles!
 
-```bash
-./run --dry-run # Check what will be executed
-./run ack       # This will execute `packages`, 'ackerman', and so on...
-./run           # This will execute all
-```
-
-**Step 2**: Install `opencode`:
-
-```bash
-curl -fsSL https://opencode.ai/install | bash
-opencode auth login
-```
-
-**Step 3**: Proceed with `diy/`:
+**Step 2**: Proceed with `diy/`:
 
 - Read the [dedicated instruction file](diy/README.md).
 - Proceed with its steps.
@@ -37,3 +26,7 @@ Other steps:
 Note:
 
 - If `tmux -V` < 3.6, then run `opencode` outside a `tmux` session because the `system` theme doesn't work.
+
+```
+
+```
