@@ -13,7 +13,6 @@ systemsettings # Equivalent of Meta key -> System settings
 **Step 2**: Navigate to Shortcuts:
 
 - Go to **Workspace** -> **Shortcuts** -> _Look top right corner_.
-- Click on **Import Scheme** at the bottom.
 - Select the file: `diy/kde/kde_desktop_shortcut_scheme.kksrc`.
 - Click **Apply**.
 
