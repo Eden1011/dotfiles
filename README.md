@@ -5,12 +5,11 @@ Input the following steps into your terminal:
 **Step 1**: Set up dotfiles:
 
 ```bash
-git clone https://github.com/Eden1011/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles
-chmod +x run && chmod +x runs/* && ./run --dry-run
+git clone https://github.com/Eden1011/dotfiles.git $HOME/dotfiles && cd $HOME/dotfiles && chmod +x run && chmod +x runs/* && ./run --dry-run
 ```
 
 Aaaaand you're done!
-If you want you can continue by importing the manual assets below, but so far, you've
+If you want, you can continue by importing the manual assets below, but so far, you've
 successfully set up these dotfiles!
 
 **Step 2**: Proceed with `diy/`:
