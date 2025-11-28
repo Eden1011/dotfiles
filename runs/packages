@@ -1,8 +1,5 @@
 #!/bin/bash
 
-RED='\033[0;31m'
-RESET='\033[0m'
-
 PACKAGES=(
 	"nvim"
 	"tmux"
@@ -58,8 +55,6 @@ fi
 echo "Welcome to OpenSuse Tumbleweed packages installation script!"
 echo "Processing packages..."
 
-zypper install -y "${PACKAGES[@]}" 2>&1 >/dev/null | while IFS= read -r line; do
-	echo -e "${RED}${line}${RESET}"
-done
+zypper install -y "${PACKAGES[@]}" 2>&1 >/dev/null
 
 echo "All packages processed! Exiting..."
