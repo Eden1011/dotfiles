@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "Welcome to stow script!"
+
+script_dir="$(cd $(dirname "${BASH_SOURCE[0]}") && cd .. && pwd)"
+
+echo "Trying to stow for ${script_dir}..."
+
+if [[ -f "$HOME/.bashrc" && ! -L "$HOME/.bashrc" ]]; then
+	if [[ ! -f "$HOME/.bashrc_old" ]]; then
+		echo "Backing up existing .bashrc file to .bashrc_old..."
+		mv "$HOME/.bashrc" "$HOME/.bashrc_old"
+	else
+		echo "Backup already exists at .bashrc_old, removing current .bashrc..."
+		rm "$HOME/.bashrc"
+	fi
+fi
+
+echo "Restowing dotfiles forcefully from $script_dir..."
+cd "$script_dir"
+stow --restow --override='.*' -t "$HOME" .
+
+echo "Restow completed successfully! Exiting..."

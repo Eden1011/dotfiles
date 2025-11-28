@@ -1,5 +1,8 @@
 #!/bin/bash
 
+RED='\033[0;31m'
+RESET='\033[0m'
+
 PACKAGES=(
 	"nvim"
 	"tmux"
@@ -48,14 +51,15 @@ PACKAGES=(
 )
 
 if [[ $EUID -ne 0 ]]; then
-	echo "This script must be run as root or with sudo privileges."
-	echo "Exiting..."
-	exit 1
+	echo "You're not root -- rerunning packages script with elevated privileges..."
+	exec sudo "$0" "$@"
 fi
 
-echo "Welcome to the OpenSuse Tumbleweed package installation program!"
-read -p "Please press Enter to continue... > "
-echo "Installing distribution packages now ..."
-sleep 1
-zypper install "${PACKAGES[@]}"
-echo "Installation was succesfull, exiting..."
+echo "Welcome to OpenSuse Tumbleweed packages installation script!"
+echo "Processing packages..."
+
+zypper install -y "${PACKAGES[@]}" 2>&1 >/dev/null | while IFS= read -r line; do
+	echo -e "${RED}${line}${RESET}"
+done
+
+echo "All packages processed! Exiting..."

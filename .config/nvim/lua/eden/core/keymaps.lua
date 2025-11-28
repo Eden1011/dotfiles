@@ -61,3 +61,13 @@ set("n", "<leader>cp", function()
 	vim.fn.setreg("+", path)
 	print("Copied path to system clipboard: " .. path)
 end, { desc = "Copy current absolute file path" })
+
+set("n", "<leader>cx", function()
+	local filepath = vim.fn.expand("%:p")
+	if filepath == "" then
+		print("No file to make executable")
+		return
+	end
+	vim.cmd("!chmod +x " .. vim.fn.shellescape(filepath))
+	print("Made executable: " .. filepath)
+end, { desc = "Make current file executable" })

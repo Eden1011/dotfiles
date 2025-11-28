@@ -1,0 +1,54 @@
+#!/bin/bash
+
+script_dir="$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)"
+
+filter=""
+dry=false
+
+while [[ $# > 0 ]]; do
+	if [[ $1 == "--dry-run" ]]; then
+		dry=true
+	else
+		filter="$1"
+	fi
+	shift
+done
+
+YELLOW='\033[0;33m'
+GREEN='\033[0;32m'
+RESET='\033[0m'
+
+LOG_DRY="[DRY_RUN]"
+LOG="[FORCE]"
+log() {
+	if [[ $dry == true ]]; then
+		echo -e "${YELLOW}${LOG_DRY}${RESET}: Would $@"
+	else
+		echo -e "${GREEN}${LOG}${RESET}: $@"
+	fi
+}
+
+execute() {
+	log "execute $(basename $@)"
+	if [[ $dry == true ]]; then
+		return
+	fi
+
+	echo
+	"$@"
+	echo
+}
+
+log "run $script_dir -- $filter"
+cd $script_dir
+scripts=$(find ./runs -maxdepth 1 -mindepth 1 -executable -type f)
+
+for script in $scripts; do
+	if echo "$script" | grep -qv "$filter"; then
+		log "filtered out via '$filter' -- $script)"
+		continue
+	fi
+	execute $script
+done
+
+log "exit successfully..."
