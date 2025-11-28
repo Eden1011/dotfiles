@@ -21,3 +21,5 @@ export GIT_PS1_SHOWUPSTREAM="auto"
 export GIT_PS1_SHOWCONFLICTSTATE="yes"
 export GIT_PS1_DESCRIBE_STYLE="default"
 export GIT_PS1_HIDE_IF_PWD_IGNORED=1
+
+export PATH=$HOME/dotfiles/local/scripts:$PATH

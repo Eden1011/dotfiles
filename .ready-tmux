@@ -1,0 +1,6 @@
+#!/bin/bash
+
+tmux neww -n work
+tmux neww -n extra
+tmux split-window -v -t extra
+tmux select-window -t 1

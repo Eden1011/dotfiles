@@ -30,6 +30,9 @@ bind 'set vi-ins-mode-string \1\e[1;94m\e[5 q\2[I]'
 #Zoxide `cd` substitution
 eval "$(zoxide init --cmd cd bash)"
 
+#Fzf keybinds (CTRL^R is fuzzy history, CTRL^T is directories lookup)
+eval "$(fzf --bash)"
+
 #SDKMAN sourcing in current shell (binary is called `sdk`)
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
