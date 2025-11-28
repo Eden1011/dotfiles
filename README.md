@@ -36,7 +36,7 @@ opencode auth login
 
 **Step 3**: Proceed with `diy/`:
 
-- Read the dedicated instruction file.
+- Read the [dedicated instruction file](diy/README.md).
 - Proceed with its steps.
 
 Other steps:
