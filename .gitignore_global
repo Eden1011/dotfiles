@@ -256,3 +256,5 @@ coverage/
 .coverage.*
 htmlcov/
 
+# Claude
+.claude/

@@ -21,9 +21,6 @@ opt.autoread = true
 opt.incsearch = true
 opt.inccommand = "split"
 
-opt.ignorecase = true
-opt.smartcase = true
-
 opt.termguicolors = true
 
 opt.scrolloff = 8
