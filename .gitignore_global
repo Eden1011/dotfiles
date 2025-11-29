@@ -243,8 +243,6 @@ obj/
 *.pdb
 *.prof
 *.trace
-core
-core.*
 vgcore.*
 .env
 .env.local
@@ -258,3 +256,4 @@ htmlcov/
 
 # Claude
 .claude/
+.opencode/
