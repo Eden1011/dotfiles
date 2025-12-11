@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 selected=$(fd -t d --min-depth 1 --max-depth 1 . "$HOME" "$HOME/Studia" "$HOME/Projects" "$HOME/Projekty" 2>/dev/null | fzf)
 

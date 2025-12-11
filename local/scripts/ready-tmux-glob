@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [[ -x ".ready-tmux" ]]; then
 	./.ready-tmux
