@@ -38,3 +38,6 @@ eval "$(fzf --bash)"
 
 #Opencode
 export PATH=/home/krzys1234/.opencode/bin:$PATH
+
+#Helps `pinentry` find current `pts` terminal when asked for gpg passphrase
+export GPG_TTY=$(tty)

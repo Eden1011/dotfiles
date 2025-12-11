@@ -45,6 +45,7 @@ PACKAGES=(
 	"zlib-devel"
 	"minikube"
 	"gnu_parallel"
+	"gpg"
 )
 
 if [[ $EUID -ne 0 ]]; then
