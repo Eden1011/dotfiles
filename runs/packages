@@ -46,6 +46,7 @@ PACKAGES=(
 	"minikube"
 	"gnu_parallel"
 	"gpg"
+	"pinentry"
 )
 
 if [[ $EUID -ne 0 ]]; then
