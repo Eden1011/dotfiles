@@ -42,10 +42,10 @@ BLOB_HASH=$(echo "$GPG_KEY_CONTENT" | git hash-object -w --stdin)
 
 TAG_MESSAGE="GPG Pub-key 
 
-This tag contains the GPG public key (ID: $GPG_KEY_ID) stored as a git blob.
+This tag contains the GPG public key (FP: $GPG_KEY_ID) stored as a git blob.
 
 Blob: $BLOB_HASH
-Key ID: $GPG_KEY_ID
+Key Fingerprint: $GPG_KEY_ID
 Real Name: $GPG_REAL_NAME
 E-Mail: $GPG_EMAIL
 
