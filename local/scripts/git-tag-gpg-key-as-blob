@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+set -e
+
+if ! git rev-parse --git-dir >/dev/null 2>&1; then
+	echo -e "Not inside a git repository" >&2
+	exit 1
+fi
+
+if [ $# -eq 2 ]; then
+	GPG_KEY_ID="$1"
+	TAG_NAME="$2"
+elif [ $# -eq 1 ]; then
+	if [ -z "$MAIN_GPG_KEY_ID" ]; then
+		echo -e "MAIN_GPG_KEY_ID environment variable is not set" >&2
+		exit 1
+	fi
+	GPG_KEY_ID="$MAIN_GPG_KEY_ID"
+	TAG_NAME="$1"
+else
+	echo -e "Usage: $(basename ${BASH_SOURCE[0]}) [GPG_KEY_ID] TAG_NAME" >&2
+	echo "Or set MAIN_GPG_KEY_ID environment variable and provide only TAG_NAME" >&2
+	exit 1
+fi
+
+(gpg --list-keys &>/dev/null)
+if ! gpg --list-keys "$GPG_KEY_ID" >/dev/null 2>&1; then
+	echo -e "GPG key '$GPG_KEY_ID' not found in local keyring" >&2
+	exit 1
+fi
+
+GPG_KEY_CONTENT=$(gpg -a --export "$GPG_KEY_ID")
+if [ -z "$GPG_KEY_CONTENT" ]; then
+	echo -e "Failed to export GPG key" >&2
+	exit 1
+fi
+
+GPG_REAL_NAME=$(gpg --list-keys --with-colons "$GPG_KEY_ID" | grep '^uid' | head -1 | cut -d: -f10 | sed 's/ <.*//')
+GPG_EMAIL=$(gpg --list-keys --with-colons "$GPG_KEY_ID" | grep '^uid' | head -1 | cut -d: -f10 | sed 's/.*<\(.*\)>.*/\1/')
+
+BLOB_HASH=$(echo "$GPG_KEY_CONTENT" | git hash-object -w --stdin)
+
+TAG_MESSAGE="GPG Pub-key 
+
+This tag contains the GPG public key (ID: $GPG_KEY_ID) stored as a git blob.
+
+Blob: $BLOB_HASH
+Key ID: $GPG_KEY_ID
+Real Name: $GPG_REAL_NAME
+E-Mail: $GPG_EMAIL
+
+Useful notes:
++ import this GPG key from the tag:
+	- git show $TAG_NAME | gpg --import
+
++ explicitly reference the blob:
+	- git cat-file blob $BLOB_HASH | gpg --import
+
++ verify a signed commit (after importing the pub-key):
+	- git verify-commit <commit-hash>
+
++ see commit signature details:
+	- git log --show-signature
+
++ verify a signed tag:
+	- git verify-tag <tag-name>
+
++ show tag with signature verification:
+	- git tag -v <tag-name>
+
+Trust the key:
++ after importing, you should set a trust level for this pub-key:
+	> gpg --edit-key $GPG_KEY_ID
+	> trust # Select a trust level (e.g 5 for ultimate)
+	> quit
+
+Verify:
++ verify the imported key via its fingerprint:
+	- gpg --fingerprint $GPG_KEY_ID
+"
+
+git tag -a "$TAG_NAME" "$BLOB_HASH" -m "$TAG_MESSAGE"
+
+echo "Created tag '$TAG_NAME' (is ${BLOB_HASH:0:8})"

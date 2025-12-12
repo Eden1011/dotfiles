@@ -47,6 +47,8 @@
 	rp = rev-parse
 	sbmdiff = "!git diff && git submodule foreach 'git diff'"
 	sbmpu = "push --recurse-submodules=on-demand"
+	vc = verify-commit
+	vt = verify-tag
 
 [rerere]
 	enabled = true
