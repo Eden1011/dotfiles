@@ -1,4 +1,4 @@
-# Installation (for anybody)
+# Scripted installation (for anybody)
 
 Input the following steps into your terminal:
 
@@ -14,7 +14,7 @@ successfully set up these dotfiles!
 
 ---
 
-# Extra manual installation (for owner only)
+# Manual installation (for owner)
 
 **Step 1**: Proceed with `diy/`:
 
