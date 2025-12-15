@@ -16,4 +16,4 @@ This way the process of importing this asset is more streamlined and requires le
 
 **Step 2**: Import keybindings:
 
--Choose and import file: `diy/vimium/vimium_c-20250827_145959.json`.
+- Choose and import file: `diy/vimium/vimium_c-20250827_145959.json`.

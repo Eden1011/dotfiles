@@ -32,6 +32,16 @@ gpg --edit-key krzysztof.glowka@pm.me
 > quit
 ```
 
+**Step 4**: Import `SSH` key:
+
+```bash
+gpg -d id_ed25519.gpg > $HOME/.ssh/id_ed25519 # Get encrypted private key from Proton Pass
+chmod 600 $HOME/.ssh/id_ed25519
+ssh-keygen -y -f $HOME/.ssh/id_ed25519 > $HOME/.ssh/id_ed25519.pub
+```
+
+Test connection via: `ssh -T git@github.com`.
+
 Other steps:
 
 - Run `tmux` and press `Prefix + I` to fetch plugins.
