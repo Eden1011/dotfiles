@@ -47,6 +47,7 @@ PACKAGES=(
 	"gnu_parallel"
 	"gpg"
 	"pinentry"
+	"elisa"
 )
 
 if [[ $EUID -ne 0 ]]; then
