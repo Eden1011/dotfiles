@@ -257,3 +257,7 @@ htmlcov/
 # Claude
 .claude/
 .opencode/
+
+# SSH
+.ssh/sockets/*
+!.ssh/sockets/.gitkeep
