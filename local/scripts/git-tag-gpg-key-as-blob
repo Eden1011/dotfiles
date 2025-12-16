@@ -53,7 +53,7 @@ Useful notes:
 + import this GPG key from the tag:
 	- git show $TAG_NAME | gpg --import
 
-+ explicitly reference the blob:
++ or explicitly reference the blob:
 	- git cat-file blob $BLOB_HASH | gpg --import
 
 + verify a signed commit (after importing the pub-key):
