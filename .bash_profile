@@ -25,3 +25,4 @@ export GIT_PS1_HIDE_IF_PWD_IGNORED=1
 export MAIN_GPG_KEY_ID=E116C081E47E7C97
 
 export PATH=$HOME/dotfiles/local/scripts:$PATH
+export PATH=$HOME/.opencode/bin:$PATH

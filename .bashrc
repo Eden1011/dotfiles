@@ -36,8 +36,8 @@ eval "$(fzf --bash)"
 #SDKMAN sourcing in current shell (binary is called `sdk`)
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-#Opencode
-export PATH=/home/krzys1234/.opencode/bin:$PATH
-
 #Helps `pinentry` find current `pts` terminal when asked for gpg passphrase
 export GPG_TTY=$(tty)
+
+#Establish GPG SSH agent socket for the SSH Client to use instead of native agent
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
