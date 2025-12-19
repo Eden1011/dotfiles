@@ -36,7 +36,7 @@ eval "$(fzf --bash)"
 #SDKMAN sourcing in current shell (binary is called `sdk`)
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-#Helps `pinentry` find current `pts` terminal when asked for gpg passphrase
+#Helps `pinentry` find current `pts` terminal when asked for GPG passphrase
 export GPG_TTY=$(tty)
 gpg --list-keys >/dev/null 2>&1
 
