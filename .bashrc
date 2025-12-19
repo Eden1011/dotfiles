@@ -38,7 +38,7 @@ eval "$(fzf --bash)"
 
 #Helps `pinentry` find current `pts` terminal when asked for gpg passphrase
 export GPG_TTY=$(tty)
-gpg-connect-agent /bye >/dev/null 2>&1
+gpg --list-keys >/dev/null 2>&1
 
 #Connect to existing SSH agent, or spawn new one
 eval $(keychain --eval --quiet --agents ssh --noask id_ed25519)
