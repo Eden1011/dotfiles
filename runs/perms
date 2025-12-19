@@ -5,5 +5,6 @@ echo "Changing permissions on vital scripts..."
 
 chmod +x local/scripts/*
 chmod +x .ready-tmux
+chmod 700 .ssh/sockets/
 
 echo "All vital scripts are now executable! Exiting..."

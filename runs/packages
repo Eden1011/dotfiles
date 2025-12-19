@@ -48,6 +48,7 @@ PACKAGES=(
 	"gpg"
 	"pinentry"
 	"elisa"
+	"keychain"
 )
 
 if [[ $EUID -ne 0 ]]; then
