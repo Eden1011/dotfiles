@@ -1,11 +1,8 @@
-# Linux
 .fuse_hidden*
 .directory
 .Trash-*
 .nfs*
 .thumbnails/
-
-# OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -13,8 +10,6 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# Neovim/Vim
 *.swp
 *.swo
 .*.swp
@@ -22,8 +17,6 @@ Thumbs.db
 Session.vim
 .netrwhist
 tags
-
-# JetBrains IDEs (IntelliJ, etc.)
 .idea/
 *.iws
 *.iml
@@ -31,22 +24,14 @@ tags
 out/
 .idea_modules/
 cmake-build-*/
-
-# VSCode 
 .vscode/
 *.code-workspace
-
-# Patch files
 *.patch
 *.diff
 *.rej
-
-# Databases 
 *.sqlite
 *.sqlite3
 *.db
-
-# SSH keys and certificates
 id_rsa
 id_ecdsa
 id_ed25519
@@ -54,29 +39,15 @@ id_ed25519
 *.key
 *.crt
 *.cert
-
-# GPG
 secring.*
-
-# Scripts
 .local-scripts/
 local-*
-
-# Documentation / Temp 
 .docusaurus
 .cache
-
-# Testing
 .pytest_cache/
 .tox/
-
-# Jupyter Notebooks
 .ipynb_checkpoints
-
-# System monitoring 
 .htop_config
-
-# Node.js
 node_modules/
 .npm
 .yarn-integrity
@@ -89,8 +60,6 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -106,8 +75,6 @@ env/
 .mypy_cache/
 .dmypy.json
 dmypy.json
-
-# Ruby
 .bundle
 vendor/bundle
 Gemfile.lock
@@ -115,23 +82,17 @@ Gemfile.lock
 .rvmrc
 .ruby-version
 .ruby-gemset
-
-# Java
 *.jar
 *.war
 *.ear
 *.nar
 hs_err_pid*
 replay_pid*
-
-# Java - Gradle
 .gradle/
 gradle-app.setting
 !gradle-wrapper.jar
 !gradle-wrapper.properties
 .gradletasknamecache
-
-# Java - Maven
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -141,18 +102,12 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
-
-# Go
 *.test
 vendor/
 go.work
 go.work.sum
 tmp/
-
-# Rust
 Cargo.lock
-
-# C/C++
 *.d
 *.ilk
 *.map
@@ -165,8 +120,6 @@ Cargo.lock
 *.dSYM/
 *.su
 *.idb
-
-# Elixir
 /_build
 /cover
 /deps
@@ -177,8 +130,6 @@ erl_crash.dump
 *.beam
 /config/*.secret.exs
 .elixir_ls/
-
-# PHP
 /vendor/
 composer.phar
 composer.lock
@@ -186,12 +137,8 @@ composer.lock
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
-
-# Kotlin
 *.hprof
 *.gradle.kts
-
-# Scala
 .history
 .cache
 .lib/
@@ -202,8 +149,6 @@ project/plugins/project/
 .sbtserver/
 .sbtserver.lock
 *.sc
-
-# Common 
 *.exe
 *.exe~
 *.dll
@@ -253,11 +198,40 @@ coverage/
 .nyc_output
 .coverage.*
 htmlcov/
-
-# Claude
 .claude/
 .opencode/
-
-# SSH
 .ssh/sockets/*
 !.ssh/sockets/.gitkeep
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+tmux/*
+**/tmux/plugins/
+!tmux/tmux.conf
+alacritty/*
+!alacritty/alacritty.toml
+.neoconf.json
+LICENSE
+lazy-lock.json
+gh/hosts.yml
+glab-cli/config.yml
+**/.ssh/known_hosts
+**/.ssh/known_hosts.old
+**/.ssh/known_hosts.*
+**/.gnupg/pubring.kbx
+**/.gnupg/trustdb.gpg
+**/.gnupg/private-keys-v1.d/
+**/.gnupg/openpgp-revocs.d/
+**/.gnupg/*.gpg
+**/.gnupg/*.kbx
+**/.gnupg/S.gpg-agent
+**/.gnupg/S.gpg-agent.*
+**/.gnupg/random_seed
+**/nvim/.lazy/
+**/kwin/**/cache/
+*.qmlc

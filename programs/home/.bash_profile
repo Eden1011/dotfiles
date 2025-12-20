@@ -24,5 +24,10 @@ export GIT_PS1_HIDE_IF_PWD_IGNORED=1
 
 export MAIN_GPG_KEY_ID=E116C081E47E7C97
 
-export PATH=$HOME/dotfiles/local/scripts:$PATH
-export PATH=$HOME/.opencode/bin:$PATH
+export PATH=$HOME/dotfiles/local/scripts:$HOME/.opencode/bin:$PATH
+
+gpg --list-keys >/dev/null 2>&1
+
+eval $(keychain --eval --quiet --agents ssh --noask id_ed25519)
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc

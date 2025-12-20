@@ -7,7 +7,6 @@ alias rp="realpath"
 
 alias sesh="tmux-sessionizer"
 
-#Goofs
 alias dc="cd"
 alias exut="exit"
 alias exti="exit"
@@ -25,10 +24,10 @@ alias gut="git"
 alias cim="vim"
 alias bim="vim"
 alias clera="clear"
+alias cleara="clear"
 alias claer="clear"
 alias celar="clear"
 alias mkdri="mkdir"
 alias cta="cat"
 alias pwdd="pwd"
 alias emacs="echo 'Nice try'"
-

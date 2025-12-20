@@ -1,23 +1,65 @@
 #!/usr/bin/env bash
 
-echo "Welcome to stow script!"
+echo "Welcome to the stow script!"
+echo "Changing permissions on vital scripts and dirs..."
+
+chmod +x local/scripts/*
+chmod +x programs/home/.ready-tmux
+chmod 700 programs/home/.ssh
+chmod 700 programs/home/.ssh/sockets
+
+[[ -f programs/home/.ssh/config ]] && chmod 600 programs/home/.ssh/config
+
+find programs/home/.ssh -type f -name 'id_*' ! -name '*.pub' -exec chmod 600 {} \;
+find programs/home/.ssh -type f -name '*.pub' -exec chmod 644 {} \;
+
+[[ -d programs/home/.gnupg ]] && chmod 700 programs/home/.gnupg
+[[ -f programs/home/.gnupg/gpg-agent.conf ]] && chmod 600 programs/home/.gnupg/gpg-agent.conf
+
+echo "All vital scripts and dirs now have good perms! Continuing..."
 
 script_dir="$(cd $(dirname "${BASH_SOURCE[0]}") && cd .. && pwd)"
-
 echo "Trying to stow for ${script_dir}..."
 
-if [[ -f "$HOME/.bashrc" && ! -L "$HOME/.bashrc" ]]; then
-	if [[ ! -f "$HOME/.bashrc_old" ]]; then
-		echo "Backing up existing .bashrc file to .bashrc_old..."
-		mv "$HOME/.bashrc" "$HOME/.bashrc_old"
-	else
-		echo "Backup already exists at .bashrc_old, removing current .bashrc..."
-		rm "$HOME/.bashrc"
+remove_if_not_symlink() {
+	local path="$1"
+	if [[ -z "$path" ]]; then
+		echo "No path provided to function"
+		return 1
 	fi
-fi
+	if [[ "$path" == "/" || "$path" == "$HOME" || "$path" == "$HOME/" ]]; then
+		echo "Refusing to remove critical path -- $path"
+		return 1
+	fi
+	echo "Found path -- $path"
+	if [[ -e "$path" && ! -L "$path" ]]; then
+		echo "Removing conflicting path -- $path"
+		rm -rf "$path"
+	fi
 
-echo "Restowing dotfiles forcefully from $script_dir..."
-cd "$script_dir"
-stow --restow --override='.*' -t "$HOME" .
+}
 
-echo "Restow completed successfully! Exiting..."
+conflicting_paths=(
+	"$HOME/.bashrc"
+	"$HOME/.bash_aliases"
+	"$HOME/.bash_profile"
+	"$HOME/.config/alacritty"
+	"$HOME/.config/git"
+	"$HOME/.config/nvim"
+	"$HOME/.config/tmux"
+	"$HOME/.gnupg/gpg-agent.conf"
+	"$HOME/.ssh/config"
+	"$HOME/.ssh/sockets"
+)
+
+for path in "${conflicting_paths[@]}"; do
+	remove_if_not_symlink "$path"
+done
+
+echo "Stowing dotfiles from $script_dir..."
+cd "$script_dir/programs"
+
+stow --restow -t "$HOME/.config" config
+stow --restow -t "$HOME" home
+
+echo "Stow completed successfully! Exiting..."

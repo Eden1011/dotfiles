@@ -70,12 +70,12 @@
 [commit]
 	gpgsign = true
 	verbose = true
-	template = ~/.gitmessage
+	template = ~/.config/git/message-templ
 
 [core]
 	preloadindex = true  
 	editor = nvim
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.config/git/ignore-templ
 	autocrlf = input
 	whitespace = "blank-at-eol,blank-at-eof,space-before-tab,tabwidth=2"
 

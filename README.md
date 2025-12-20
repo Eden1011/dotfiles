@@ -12,14 +12,15 @@ Aaaaand you're done!
 If you want, you can continue by importing the manual assets (e.g keybinds), but so far, you've
 successfully set up these dotfiles!
 
+Note: The `programs/config` directory gets symlinked to `$HOME/.config` and the `programs/home` directory -- to `$HOME`.
+
 ---
 
 # Manual installation (for owner)
 
-**Step 1**: Proceed with `diy/`:
+**Step 1**: Proceed with `local/diy/`:
 
-- Read the [dedicated instruction file](diy/README.md).
-- Proceed with its steps.
+- Import the assets manually.
 
 **Step 2**: Import `GPG` keys:
 
