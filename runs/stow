@@ -21,37 +21,6 @@ echo "All vital scripts and dirs now have good perms! Continuing..."
 script_dir="$(cd $(dirname "${BASH_SOURCE[0]}") && cd .. && pwd)"
 echo "Trying to stow for ${script_dir}..."
 
-remove_if_not_symlink() {
-	local path="$1"
-	if [[ -z "$path" ]]; then
-		echo "No path provided to function"
-		return 1
-	fi
-	if [[ "$path" == "/" || "$path" == "$HOME" || "$path" == "$HOME/" ]]; then
-		echo "Refusing to remove critical path -- $path"
-		return 1
-	fi
-	echo "Found path -- $path"
-	if [[ -e "$path" && ! -L "$path" ]]; then
-		echo "Removing conflicting path -- $path"
-		rm -rf "$path"
-	fi
-
-}
-
-conflicting_paths=(
-	"$HOME/.bashrc"
-	"$HOME/.bash_aliases"
-	"$HOME/.bash_profile"
-	"$HOME/.config/alacritty"
-	"$HOME/.config/git"
-	"$HOME/.config/nvim"
-	"$HOME/.config/tmux"
-	"$HOME/.gnupg/gpg-agent.conf"
-	"$HOME/.ssh/config"
-	"$HOME/.ssh/sockets"
-)
-
 for path in "${conflicting_paths[@]}"; do
 	remove_if_not_symlink "$path"
 done
@@ -62,4 +31,12 @@ cd "$script_dir/programs"
 stow --restow -t "$HOME/.config" config
 stow --restow -t "$HOME" home
 
-echo "Stow completed successfully! Exiting..."
+YELLOW='\033[0;33m'
+RESET='\033[0m'
+
+echo
+echo -e "${YELLOW}[WARNING]${RESET}: This script is NOT idempotent!"
+echo -e "${YELLOW}[WARNING]${RESET}: It is highly advised you check whether you have stale symlinks from previous runs/builds, or old distro unlinked files!"
+echo
+
+echo "Stow completed! Exiting..."
