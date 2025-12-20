@@ -24,6 +24,9 @@ export GIT_PS1_HIDE_IF_PWD_IGNORED=1
 
 export MAIN_GPG_KEY_ID=E116C081E47E7C97
 
+export ZYPP_PCK_PRELOAD=1
+export ZYPP_CURL2=1
+
 export PATH=$HOME/dotfiles/local/scripts:$HOME/.opencode/bin:$PATH
 
 gpg --list-keys >/dev/null 2>&1

@@ -55,3 +55,13 @@ Note:
 
 - Run `tmux` and press `Prefix + I` to fetch plugins.
 - Run `nvim` to download `Lua` plugins.
+
+If `OpenSuse Tumbleweed` still hasn't made parallel downloads default (_sigh_):
+
+- Add/change to `/etc/zypp/zypp.conf`:
+  - `download.max_concurrent_downloads = 20`
+  - `commit.downloadMode = DownloadInAdvance`
+- Change in `/etc/zypp/repos.d/repo-oss.repo`:
+  - `baseurl=http://download.opensuse.org/tumbleweed/repo/oss/?mediahandler=curl2`
+- Run all `zypper` stuff with:
+  - `sudo -E` to get env variables.
