@@ -12,7 +12,7 @@ Aaaaand you're done!
 If you want, you can continue by importing the manual assets (e.g keybinds), but so far, you've
 successfully set up these dotfiles!
 
-Note: The `programs/config` directory gets symlinked to `$HOME/.config` and the `programs/home` directory -- to `$HOME`.
+Note: The `programs/config` directory gets symlinked to `$HOME/.config` and the `programs/home` directory to `$HOME`.
 
 ---
 
@@ -59,7 +59,7 @@ Note:
 If `OpenSuse Tumbleweed` still hasn't made parallel downloads default (_sigh_):
 
 - Add/change to `/etc/zypp/zypp.conf`:
-  - `download.max_concurrent_downloads = 20`
+  - `download.max_concurrent_connections = 30`
   - `commit.downloadMode = DownloadInAdvance`
 - Change in `/etc/zypp/repos.d/repo-oss.repo`:
   - `baseurl=http://download.opensuse.org/tumbleweed/repo/oss/?mediahandler=curl2`

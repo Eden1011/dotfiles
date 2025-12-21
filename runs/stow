@@ -35,8 +35,9 @@ YELLOW='\033[0;33m'
 RESET='\033[0m'
 
 echo
-echo -e "${YELLOW}[WARNING]${RESET}: This script is NOT idempotent!"
-echo -e "${YELLOW}[WARNING]${RESET}: It is highly advised you check whether you have stale symlinks from previous runs/builds, or old distro unlinked files!"
+echo -e "${YELLOW}[WARNING]${RESET}: This script is NOT idempotent, and might fail!"
+echo -e "${YELLOW}[WARNING]${RESET}: It is highly advised you check the above errors (if any),"
+echo -e "${YELLOW}[WARNING]${RESET}: and whether you have stale symlinks from previous runs/builds, or old distro unlinked files!"
 echo
 
 echo "Stow completed! Exiting..."
