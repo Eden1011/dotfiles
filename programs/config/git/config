@@ -49,6 +49,7 @@
 	sbmpu = "push --recurse-submodules=on-demand"
 	vc = verify-commit
 	vt = verify-tag
+	ls = ls-files
 
 [rerere]
 	enabled = true
