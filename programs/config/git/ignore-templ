@@ -216,7 +216,6 @@ tmux/*
 alacritty/*
 !alacritty/alacritty.toml
 .neoconf.json
-LICENSE
 lazy-lock.json
 gh/hosts.yml
 glab-cli/config.yml
