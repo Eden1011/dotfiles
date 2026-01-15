@@ -1,135 +1,138 @@
 [user]
-	name = Krzysztof Główka
-	email = krzysztof.glowka@tuta.io
-	signingkey = E116C081E47E7C97
+  name = Krzysztof Główka
+  email = krzysztof.glowka@tuta.io
+  signingkey = E116C081E47E7C97
 
 [alias]
-	co = checkout
-	sw = switch
-	br = branch
-	brv= branch -vv
-	ci = commit
-	st = status
-	mg = merge
-	mgtool = mergetool
-	pl = pull
-	pu = push
-	fe = fetch
-	fent = fetch --no-tags
-	re = remote
-	rb = rebase
-	sh = show
-	cp = cherry-pick
-	db = describe
-	ac = archive
-	sl = shortlog
-	rl = reflog
-	rlv= log -g
-	sa = stash
-	cn = clean
-	rs = reset
-	rt = restore
-	rv = revert
-	cat= cat-file
-	tree= ls-tree
-	files= ls-files
-	amend = commit --amend 
-	whitespace = diff --check
-	unstage = "restore --staged"
-	last = "log -1 --patch --stat HEAD"
-	graph = "log --all --oneline --decorate --graph"
-	publish = "commit -a"
-	re3 = rerere
-	bl = blame
-	bi = bisect
-	sbm = submodule
-	sbt = subtree
-	rp = rev-parse
-	sbmdiff = "!git diff && git submodule foreach 'git diff'"
-	sbmpu = "push --recurse-submodules=on-demand"
-	vc = verify-commit
-	vt = verify-tag
-	ls = ls-files
+  co = checkout
+  sw = switch
+  br = branch
+  brv= branch -vv
+  ci = commit
+  st = status
+  mg = merge
+  mgtool = mergetool
+  pl = pull
+  pu = push
+  fe = fetch
+  fent = fetch --no-tags
+  re = remote
+  rb = rebase
+  sh = show
+  cp = cherry-pick
+  db = describe
+  ac = archive
+  sl = shortlog
+  rl = reflog
+  rlv= log -g
+  sa = stash
+  cn = clean
+  rs = reset
+  rt = restore
+  rv = revert
+  cat= cat-file
+  tree= ls-tree
+  files= ls-files
+  amend = commit --amend 
+  whitespace = diff --check
+  unstage = "restore --staged"
+  last = "log -1 --patch --stat HEAD"
+  graph = "log --all --oneline --decorate --graph"
+  publish = "commit -a"
+  re3 = rerere
+  bl = blame
+  bi = bisect
+  sbm = submodule
+  sbt = subtree
+  rp = rev-parse
+  sbmdiff = "!git diff && git submodule foreach 'git diff'"
+  sbmpu = "push --recurse-submodules=on-demand"
+  vc = verify-commit
+  vt = verify-tag
+  ls = ls-files
 
 [rerere]
-	enabled = true
-	autoUpdate = true
+  enabled = true
+  autoUpdate = true
 
 [help]
-	autocorrect = prompt
+  autocorrect = prompt
 
 [credential]
-	helper = cache
+  helper = cache
 
 [merge]
-	tool = kdiff3
-	conflictstyle = diff3
+  tool = kdiff3
+  conflictstyle = diff3
 
 [submodule]
-	recurse = true
+  recurse = true
 
 [commit]
-	gpgsign = true
-	verbose = true
-	template = ~/.config/git/message-templ
+  gpgsign = true
+  verbose = true
+  template = ~/.config/git/message-templ
+
+[apply]
+  whitespace = fix
 
 [core]
-	preloadindex = true  
-	editor = nvim
-	excludesfile = ~/.config/git/ignore-templ
-	autocrlf = input
-	whitespace = "blank-at-eol,blank-at-eof,space-before-tab,tabwidth=2"
+  preloadindex = true  
+  editor = nvim
+  excludesfile = ~/.config/git/ignore-templ
+  autocrlf = input
+  whitespace = "blank-at-eol,blank-at-eof,space-before-tab,tab-in-indent,tabwidth=2"
 
 [blame]
-	coloring = highlightRecent
+  coloring = highlightRecent
 
 [diff]
-	renames = copies
-	submodule = log
+  renames = copies
+  submodule = log
 
 [init]
-	defaultBranch = main 
+  defaultBranch = main 
 
 [status]
-	branch = true
-	showStash = true
-	showUntrackedFiles = all  
-	submoduleSummary = true 
+  branch = true
+  showStash = true
+  showUntrackedFiles = all  
+  submoduleSummary = true 
 
 [pager]
-	branch = false 
+  branch = false 
 
 [push]
-	default = current  
-	recurseSubmodules = check
+  default = current  
+  recurseSubmodules = check
 
 [pull]
-	default = current
+  default = current
 
 [rebase]
-	missingCommitsCheck = error 
+  missingCommitsCheck = error 
 
 [branch]
-	sort = -committerdate
+  sort = -committerdate
 
 [tag]
-	gpgsign = true
-	sort = -taggerdate
+  gpgsign = true
+  sort = -taggerdate
 
 [interactive]
-	singlekey = true
+  singlekey = true
 
 [url "git@github.com:"]
-	insteadOf = "gh:"
+  insteadOf = "gh:"
 
 [url "git@github.com:Eden1011/"]
-	insteadOf = "ed:"
+  insteadOf = "ed:"
 
 [url "git@gitlab.com:"]
-	insteadOf = "gl:"
+  insteadOf = "gl:"
 
 [filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process

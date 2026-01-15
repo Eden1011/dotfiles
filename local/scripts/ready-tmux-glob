@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if [[ -x ".ready-tmux" ]]; then
-	./.ready-tmux
+  ./.ready-tmux
 elif [[ -x "$HOME/.ready-tmux" ]]; then
-	$HOME/.ready-tmux
+  $HOME/.ready-tmux
 fi
 clear

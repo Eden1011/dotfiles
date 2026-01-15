@@ -8,12 +8,12 @@ filter=""
 dry=false
 
 while [[ $# > 0 ]]; do
-	if [[ $1 == "--dry-run" ]]; then
-		dry=true
-	else
-		filter="$1"
-	fi
-	shift
+  if [[ $1 == "--dry-run" ]]; then
+    dry=true
+  else
+    filter="$1"
+  fi
+  shift
 done
 
 YELLOW='\033[0;33m'
@@ -23,22 +23,22 @@ RESET='\033[0m'
 LOG_DRY="[DRY_RUN]"
 LOG="[FORCE]"
 log() {
-	if [[ $dry == true ]]; then
-		echo -e "${YELLOW}${LOG_DRY}${RESET}: Would $@"
-	else
-		echo -e "${GREEN}${LOG}${RESET}: $@"
-	fi
+  if [[ $dry == true ]]; then
+    echo -e "${YELLOW}${LOG_DRY}${RESET}: Would $@"
+  else
+    echo -e "${GREEN}${LOG}${RESET}: $@"
+  fi
 }
 
 execute() {
-	log "execute $(basename $@)"
-	if [[ $dry == true ]]; then
-		return
-	fi
+  log "execute $(basename $@)"
+  if [[ $dry == true ]]; then
+    return
+  fi
 
-	echo
-	"$@"
-	echo
+  echo
+  "$@"
+  echo
 }
 
 log "run $script_dir -- $filter"
@@ -46,22 +46,22 @@ cd $script_dir
 scripts=$(find ./runs -maxdepth 1 -mindepth 1 -executable -type f)
 
 for script in $scripts; do
-	if echo "$script" | grep -qv "$filter"; then
-		log "filtered out via '$filter' -- $script)"
-		continue
-	fi
-	execute $script
+  if echo "$script" | grep -qv "$filter"; then
+    log "filtered out via '$filter' -- $script)"
+    continue
+  fi
+  execute $script
 done
 
 log "exit successfully..."
 
 if [[ $dry == true ]]; then
-	echo
-	read -p "Do you want to run everything? (y/N): " response
-	if [[ "$response" =~ ^[Yy]$ ]]; then
-		clear
-		exec "$script_dir/run"
-	else
-		exit 0
-	fi
+  echo
+  read -p "Do you want to run everything? (y/N): " response
+  if [[ "$response" =~ ^[Yy]$ ]]; then
+    clear
+    exec "$script_dir/run"
+  else
+    exit 0
+  fi
 fi

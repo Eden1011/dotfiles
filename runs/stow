@@ -22,7 +22,7 @@ script_dir="$(cd $(dirname "${BASH_SOURCE[0]}") && cd .. && pwd)"
 echo "Trying to stow for ${script_dir}..."
 
 for path in "${conflicting_paths[@]}"; do
-	remove_if_not_symlink "$path"
+  remove_if_not_symlink "$path"
 done
 
 echo "Stowing dotfiles from $script_dir..."

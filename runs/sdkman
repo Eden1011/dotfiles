@@ -5,29 +5,29 @@ echo "Welcome to SDKMAN installation script!"
 SDKMAN_DIR="$HOME/.sdkman"
 
 if [[ ! -d "$SDKMAN_DIR" ]]; then
-	echo "Trying to install SDKMAN..."
-	curl -s "https://get.sdkman.io" | bash
-	echo "SDKMAN installed successfully!"
+  echo "Trying to install SDKMAN..."
+  curl -s "https://get.sdkman.io" | bash
+  echo "SDKMAN installed successfully!"
 else
-	echo "SDKMAN already installed at $SDKMAN_DIR. Continuing.."
+  echo "SDKMAN already installed at $SDKMAN_DIR. Continuing.."
 fi
 
 source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 SDKS=(
-	"java 21-tem"
-	"java 25-tem"
-	"java 21-graal"
-	"java 25-graal"
-	"maven"
-	"gradle"
-	"groovy"
-	"kotlin"
+  "java 21-tem"
+  "java 25-tem"
+  "java 21-graal"
+  "java 25-graal"
+  "maven"
+  "gradle"
+  "groovy"
+  "kotlin"
 )
 
 for sdk_package in "${SDKS[@]}"; do
-	echo "Installing $sdk_package..."
-	sdk install $sdk_package || echo "Failed to install $sdk_package or already installed"
+  echo "Installing $sdk_package..."
+  sdk install $sdk_package || echo "Failed to install $sdk_package or already installed"
 done
 
 echo "All SDKs processed! Exiting..."
