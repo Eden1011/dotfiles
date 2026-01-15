@@ -32,10 +32,9 @@ opt.backspace = { "start", "eol", "indent" }
 opt.splitright = true
 opt.splitbelow = true
 
-opt.isfname:append("@-@")
 opt.updatetime = 50
 
-opt.clipboard:append("unnamedplus")
+opt.clipboard = "unnamedplus"
 opt.hlsearch = true
 opt.mouse = "a"
 
